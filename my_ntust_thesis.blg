@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (MiKTeX 2.9.7400 64-bit)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: my_ntust_thesis.aux
+The style file: ieeetr.bst
+Database file #1: my_bib.bib
+Warning--entry type for "michael_waskom_2020_3767070" isn't style-file defined
+--line 344 of file my_bib.bib
+Warning--entry type for "jeff_reback_2020_3715232" isn't style-file defined
+--line 384 of file my_bib.bib
+You've used 42 entries,
+            1876 wiz_defined-function locations,
+            722 strings with 13136 characters,
+and the built_in function-call counts, 13639 in all, are:
+= -- 1199
+> -- 774
+< -- 0
++ -- 275
+- -- 233
+* -- 1053
+:= -- 1980
+add.period$ -- 47
+call.type$ -- 42
+change.case$ -- 39
+chr.to.int$ -- 0
+cite$ -- 42
+duplicate$ -- 662
+empty$ -- 1225
+format.name$ -- 233
+if$ -- 3240
+int.to.chr$ -- 0
+int.to.str$ -- 42
+missing$ -- 41
+newline$ -- 134
+num.names$ -- 46
+pop$ -- 196
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 446
+stack$ -- 0
+substring$ -- 840
+swap$ -- 266
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 128
+width$ -- 44
+write$ -- 411
+(There were 2 warnings)

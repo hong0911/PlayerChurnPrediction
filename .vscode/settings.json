@@ -1,0 +1,125 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/*.aux": true,
+        "**/*.lof": true,
+        "**/*.log": true,
+        "**/*.lot": true,
+        "**/*.loa": true,
+        "**/*.fls": true,
+        "**/*.out": true,
+        "**/*.toc": true,
+        "**/*.fmt": true,
+        "**/*.fot": true,
+        "**/*.cb": true,
+        "**/*.cb2": true,
+        "**/*.lb": true,
+        "**/*.bbl": true,
+        "**/*.bcf": true,
+        "**/*.blg": true,
+        "**/*-blx.aux": true,
+        "**/*-blx.bib": true,
+        "**/*.run.xml": true,
+        "**/*.synctex.gz": true,
+        "**/*.xwm": true,
+    },
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex ➞ bibtex ➞ xelatex × 2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "XeLaTeX",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "BibTeX",
+            "tools": [
+                "bibtex"
+            ]
+        },
+        // {
+        //     "name": "PDFLaTeX",
+        //     "tools": [
+        //         "pdflatex"
+        //     ]
+        // },
+        // {
+        //     "name": "latexmk",
+        //     "tools": [
+        //         "latexmk"
+        //     ]
+        // },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.loa",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.synctex.gz",
+        "*.xwm",
+    ],
+    "editor.wordWrap": "off",
+    "git.ignoreMissingGitWarning": true
+}
