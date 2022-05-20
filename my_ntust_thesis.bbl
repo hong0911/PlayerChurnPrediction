@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{miller2012gdc}
 P.~Miller, ``Gdc 2012: How valve made team fortress 2 free-to-play,'' {\em
@@ -21,5 +21,130 @@ D.~Powers, ``Evaluation: From precision, recall and f-factor to roc,
 \bibitem{Goutte2005API}
 C.~Goutte and {\'E}.~Gaussier, ``A probabilistic interpretation of precision,
   recall and f-score, with implication for evaluation,'' in {\em ECIR}, 2005.
+
+\bibitem{wiki:f2p}
+{Wikipedia contributors}, ``Free-to-play --- {Wikipedia}{,} the free
+  encyclopedia.''
+  \url{https://en.wikipedia.org/w/index.php?title=Free-to-play&oldid=965292994},
+  2020.
+\newblock [Online; accessed 10-July-2020].
+
+\bibitem{lee2018game}
+E.~Lee, Y.~Jang, D.-M. Yoon, J.~Jeon, S.-i. Yang, S.-K. Lee, D.-W. Kim, P.~P.
+  Chen, A.~Guitart, P.~Bertens, �.~Periáñez, F.~Hadiji, M.~Müller, Y.~Joo,
+  j.~Lee, I.~Hwang, and K.-J. Kim, ``Game data mining competition on churn
+  prediction and survival analysis using commercial game log data,'' {\em IEEE
+  Transactions on Games}, vol.~11, no.~3, pp.~215--226, 2018.
+
+\bibitem{10.1007/978-3-030-27355-2_10}
+R.~Flunger, A.~Mladenow, and C.~Strauss, ``Game analytics on free to play,'' in
+  {\em Big Data Innovations and Applications} (M.~Younas, I.~Awan, and
+  S.~Benbernou, eds.), (Cham), pp.~133--141, Springer International Publishing,
+  2019.
+
+\bibitem{XGBoostTemporalData}
+B.~Gregory, ``Predicting customer churn: Extreme gradient boosting with
+  temporal data,'' {\em arXiv preprint arXiv: 1802.03396}, 2018.
+
+\bibitem{tamassia2016predicting}
+M.~Tamassia, W.~Raffe, R.~Sifa, A.~Drachen, F.~Zambetta, and M.~Hitchens,
+  ``Predicting player churn in destiny: A hidden markov models approach to
+  predicting player departure in a major online game,'' in {\em 2016 IEEE
+  Conference on Computational Intelligence and Games (CIG)}, pp.~1--8, IEEE,
+  2016.
+
+\bibitem{perianez2016churn}
+{\'A}.~Peri{\'a}{\~n}ez, A.~Saas, A.~Guitart, and C.~Magne, ``Churn prediction
+  in mobile social games: Towards a complete assessment using survival
+  ensembles,'' in {\em 2016 IEEE International Conference on Data Science and
+  Advanced Analytics (DSAA)}, pp.~564--573, IEEE, 2016.
+
+\bibitem{runge2014churn}
+J.~Runge, P.~Gao, F.~Garcin, and B.~Faltings, ``Churn prediction for high-value
+  players in casual social games,'' in {\em 2014 IEEE conference on
+  Computational Intelligence and Games}, pp.~1--8, IEEE, 2014.
+
+\bibitem{sifa2015predicting}
+R.~Sifa, F.~Hadiji, J.~Runge, A.~Drachen, K.~Kersting, and C.~Bauckhage,
+  ``Predicting purchase decisions in mobile free-to-play games,'' in {\em
+  Eleventh Artificial Intelligence and Interactive Digital Entertainment
+  Conference}, 2015.
+
+\bibitem{PredictionWithEventFrequency}
+H.~Xie, S.~Devlin, D.~Kudenko, and P.~Cowling, ``Predicting player
+  disengagement and first purchase with event-frequency based data
+  representation,'' in {\em 2015 IEEE conference on Computational Intelligence
+  and Games}, pp.~230--237, IEEE, 2015.
+
+\bibitem{lee2016predicting}
+S.-K. Lee, S.-J. Hong, S.-I. Yang, and H.~Lee, ``Predicting churn in mobile
+  free-to-play games,'' in {\em 2016 International Conference on Information
+  and Communication Technology Convergence (ICTC)}, pp.~1046--1048, IEEE, 2016.
+
+\bibitem{6932876}
+F.~{Hadiji}, R.~{Sifa}, A.~{Drachen}, C.~{Thurau}, K.~{Kersting}, and
+  C.~{Bauckhage}, ``Predicting player churn in the wild,'' in {\em 2014 IEEE
+  Conference on Computational Intelligence and Games}, pp.~1--8, 2014.
+
+\bibitem{breiman1996bagging}
+L.~Breiman, ``Bagging predictors,'' {\em Machine learning}, vol.~24, no.~2,
+  pp.~123--140, 1996.
+
+\bibitem{breiman2001random}
+L.~Breiman, ``Random forests,'' {\em Machine learning}, vol.~45, no.~1,
+  pp.~5--32, 2001.
+
+\bibitem{breiman1984classification}
+L.~Breiman, J.~Friedman, C.~J. Stone, and R.~A. Olshen, {\em Classification and
+  regression trees}.
+\newblock CRC press, 1984.
+
+\bibitem{freund1999short}
+Y.~Freund, R.~Schapire, and N.~Abe, ``A short introduction to boosting,'' {\em
+  Journal-Japanese Society For Artificial Intelligence}, vol.~14, no.~771-780,
+  p.~1612, 1999.
+
+\bibitem{chen2016xgboost}
+T.~Chen and C.~Guestrin, ``Xgboost: A scalable tree boosting system,'' in {\em
+  Proceedings of the 22nd acm sigkdd international conference on knowledge
+  discovery and data mining}, pp.~785--794, 2016.
+
+\bibitem{tommy2018baggingandboosting}
+T.~Huang, ``機器學習: Ensemble learning之bagging、boosting和adaboost.''
+  \url{https://medium.com/@chih.sheng.huang821/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-ensemble-learning%E4%B9%8Bbagging-boosting%E5%92%8Cadaboost-af031229ebc3}.
+\newblock [Online; accessed 10-July-2020].
+
+\bibitem{martinez2020machine}
+A.~Mart{\'\i}nez, C.~Schmuck, S.~Pereverzyev~Jr, C.~Pirker, and M.~Haltmeier,
+  ``A machine learning framework for customer purchase prediction in the
+  non-contractual setting,'' {\em European Journal of Operational Research},
+  vol.~281, no.~3, pp.~588--596, 2020.
+
+\bibitem{semenov2016performance}
+A.~Semenov, P.~Romov, S.~Korolev, D.~Yashkov, and K.~Neklyudov, ``Performance
+  of machine learning algorithms in predicting game outcome from drafts in dota
+  2,'' in {\em International Conference on Analysis of Images, Social Networks
+  and Texts}, pp.~26--37, Springer, 2016.
+
+\bibitem{janusz2017helping}
+A.~Janusz, T.~Tajmajer, and M.~{\'S}wiechowski, ``Helping ai to play
+  hearthstone: Aaia'17 data mining challenge,'' in {\em 2017 Federated
+  Conference on Computer Science and Information Systems (FedCSIS)},
+  pp.~121--125, IEEE, 2017.
+
+\bibitem{chawla2002smote}
+N.~V. Chawla, K.~W. Bowyer, L.~O. Hall, and W.~P. Kegelmeyer, ``Smote:
+  synthetic minority over-sampling technique,'' {\em Journal of artificial
+  intelligence research}, vol.~16, pp.~321--357, 2002.
+
+\bibitem{chinchor1993muc}
+N.~Chinchor and B.~M. Sundheim, ``Muc-5 evaluation metrics,'' in {\em Fifth
+  Message Understanding Conference (MUC-5): Proceedings of a Conference Held in
+  Baltimore, Maryland, August 25-27, 1993}, 1993.
+
+\bibitem{kubat1997learning}
+M.~Kubat, R.~Holte, and S.~Matwin, ``Learning when negative examples abound,''
+  in {\em European Conference on Machine Learning}, pp.~146--153, Springer,
+  1997.
 
 \end{thebibliography}

@@ -303,100 +303,100 @@
 %       中文摘要 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\newpage
-\thispagestyle{plain}  % 無 header，但在浮水印模式下會有浮水印
+%%%\newpage
+%%%\thispagestyle{plain}  % 無 header，但在浮水印模式下會有浮水印
 % create an entry in table of contents for 中文摘要
-\phantomsection
-\addcontentsline{toc}{chapter}{\nameCabstract}
+%%%\phantomsection
+%%%\addcontentsline{toc}{chapter}{\nameCabstract}
 
 % aligned to the center of the page
-\begin{center}
-	\makebox[5cm][s]{\LARGE{中文摘要}}\\
-\end{center}
+%%%\begin{center}
+%%%	\makebox[5cm][s]{\LARGE{中文摘要}}\\
+%%%\end{center}
 % Resume the line spacing to the desired setting
-\renewcommand{\baselinestretch}{\mybaselinestretch}
+%%%\renewcommand{\baselinestretch}{\mybaselinestretch}
 %it needs a font size changing command to be effective
 % restore the font size to normal
 \normalsize
 %%%%%%%%%%%%%
-\noindent
-\input{frontpages/my_cabstract.tex}
-\newpage
+%%%\noindent
+%%%\input{frontpages/my_cabstract.tex}
+%%%\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %       英文摘要 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\thispagestyle{plain}  % 無 header，但在浮水印模式下會有浮水印
+%%%\thispagestyle{plain}  % 無 header，但在浮水印模式下會有浮水印
 % create an entry in table of contents for 英文摘要
-\phantomsection
-\addcontentsline{toc}{chapter}{\nameEabstract}
+%%%\phantomsection
+%%%\addcontentsline{toc}{chapter}{\nameEabstract}
 % aligned to the center of the page
-\begin{center}
+%%%\begin{center}
 	% \renewcommand{\baselinestretch}{1}   %行距 1 倍
-	\makebox[\width][s]{\LARGE{ABSTRACT}}\\
-\end{center}
+%%%	\makebox[\width][s]{\LARGE{ABSTRACT}}\\
+%%%\end{center}
 % Resume the line spacing the desired setting
-\renewcommand{\baselinestretch}{\mybaselinestretch}   %恢復原設定
+%%%\renewcommand{\baselinestretch}{\mybaselinestretch}   %恢復原設定
 %\large %it needs a font size changing command to be effective
 % restore the font size to normal
-\normalsize
+%%%\normalsize
 %%%%%%%%%%%%%
-\input{frontpages/my_eabstract.tex}
+%%%\input{frontpages/my_eabstract.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %       誌謝 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Acknowledgment
-\newpage
+%%%\newpage
 % \chapter*{\protect\makebox[5cm][s]{\nameAckn}} %\makebox{} is fragile; need protect
-\phantomsection
-\addcontentsline{toc}{chapter}{\nameAckn}
-\begin{center}
-	\makebox[5cm][s]{\LARGE{誌謝}}\\
-\end{center}
-\input{frontpages/my_ackn.tex}
+%%%\phantomsection
+%%%\addcontentsline{toc}{chapter}{\nameAckn}
+%%%\begin{center}
+%%%	\makebox[5cm][s]{\LARGE{誌謝}}\\
+%%%\end{center}
+%%%\input{frontpages/my_ackn.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %       目錄 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Table of contents
-\newpage
-\renewcommand{\contentsname}{\protect\makebox[5cm][s]{\nameToc}}
+%%%\newpage
+%%%\renewcommand{\contentsname}{\protect\makebox[5cm][s]{\nameToc}}
 %\makebox{} is fragile; need protect
-\phantomsection
-\addcontentsline{toc}{chapter}{\nameToc}
-\tableofcontents
+%%%\phantomsection
+%%%\addcontentsline{toc}{chapter}{\nameToc}
+%%%\tableofcontents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %       圖目錄 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % List of Figures
-\newcommand{\loflabel}{圖}
-\newpage
-\renewcommand{\numberline}[1]{\loflabel~#1\hspace*{1em}}
-\renewcommand{\listfigurename}{\protect\makebox[5cm][s]{\nameTof}}
+%%%\newcommand{\loflabel}{圖}
+%%%\newpage
+%%%\renewcommand{\numberline}[1]{\loflabel~#1\hspace*{1em}}
+%%%\renewcommand{\listfigurename}{\protect\makebox[5cm][s]{\nameTof}}
 %\makebox{} is fragile; need protect
-\phantomsection
-\addcontentsline{toc}{chapter}{\nameTof}
-\listoffigures
+%%%\phantomsection
+%%%\addcontentsline{toc}{chapter}{\nameTof}
+%%%\listoffigures
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %       表目錄 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % List of Tables
-\newcommand{\lotlabel}{表}
-\newpage
-\renewcommand{\numberline}[1]{\lotlabel~#1\hspace*{1em}}
-\renewcommand{\listtablename}{\protect\makebox[5cm][s]{\nameLot}}
+%%%\newcommand{\lotlabel}{表}
+%%%\newpage
+%%%\renewcommand{\numberline}[1]{\lotlabel~#1\hspace*{1em}}
+%%%\renewcommand{\listtablename}{\protect\makebox[5cm][s]{\nameLot}}
 %\makebox{} is fragile; need protect
-\phantomsection
-\addcontentsline{toc}{chapter}{\nameLot}
-\listoftables
+%%%\phantomsection
+%%%\addcontentsline{toc}{chapter}{\nameLot}
+%%%\listoftables
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %       演算法目錄 
@@ -417,23 +417,23 @@
 % Symbol list
 % define new environment, based on standard description environment
 % adapted from p.60~64, <<The LaTeX Companion>>, 1994, ISBN 0-201-54199-8
-\newcommand{\SymEntryLabel}[1]%
-{\makebox[3cm][l]{#1}}
+%%%\newcommand{\SymEntryLabel}[1]%
+%%%{\makebox[3cm][l]{#1}}
 
-\newenvironment{SymEntry}
-  {\begin{list}{}%
-      {\renewcommand{\makelabel}{\SymEntryLabel}%
-       \setlength{\labelwidth}{3cm}%
-       \setlength{\leftmargin}{\labelwidth}%
-       }%
-  }%
-  {\end{list}}
+%%%\newenvironment{SymEntry}
+%%%  {\begin{list}{}%
+%%%      {\renewcommand{\makelabel}{\SymEntryLabel}%
+%%%       \setlength{\labelwidth}{3cm}%
+%%%       \setlength{\leftmargin}{\labelwidth}%
+%%%       }%
+%%%  }%
+%%%  {\end{list}}
 %
-\newpage
-\phantomsection
-\chapter*{\protect\makebox[5cm][s]{\nameSlist}} %\makebox{} is fragile; need protect
-\addcontentsline{toc}{chapter}{\nameSlist}
-\input{frontpages/my_symbols.tex}
+%%%\newpage
+%%%\phantomsection
+%%%\chapter*{\protect\makebox[5cm][s]{\nameSlist}} %\makebox{} is fragile; need protect
+%%%\addcontentsline{toc}{chapter}{\nameSlist}
+%%%\input{frontpages/my_symbols.tex}
 
 
 \newpage
