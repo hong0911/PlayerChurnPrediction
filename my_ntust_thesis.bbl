@@ -2,12 +2,25 @@
 
 \bibitem{miller2012gdc}
 P.~Miller, ``Gdc 2012: How valve made team fortress 2 free-to-play,'' {\em
-  Gamasutra. Haettu}, vol.~7, p.~2012, 2012.
+  Gamasutra. Haettu}, vol.~7, 2012.
+
+\bibitem{HarvardBusiness}
+F.~Reichheld and W.~Sasser, ``Zero defects: quality comes to service,'' {\em
+  Harvard Business Review, September/October}, pp.~105--111, 1990.
 
 \bibitem{SwrveNewPlayerReport}
 {Swrve}, ``The april 2014 new players report.''
   \url{https://www.swrve.com/resources/weblog/the-april-2014-new-players-report},
   2014.
+
+\bibitem{SupervisedMachineLearning}
+K.~Mustač, K.~Bačić, L.~Skorin-Kapov, and M.~Sužnjević, ``Predicting
+  player churn of a free-to-play mobile video game using supervised machine
+  learning,'' {\em MDPI}, 2022.
+
+\bibitem{tukey1977exploratory}
+J.~W. Tukey, {\em Exploratory data analysis}, vol.~2.
+\newblock Reading, MA, 1977.
 
 \bibitem{fawcett2006introduction}
 T.~Fawcett, ``An introduction to roc analysis,'' {\em Pattern recognition
@@ -30,11 +43,11 @@ C.~Goutte and {\'E}.~Gaussier, ``A probabilistic interpretation of precision,
 \newblock [Online; accessed 10-July-2020].
 
 \bibitem{lee2018game}
-E.~Lee, Y.~Jang, D.-M. Yoon, J.~Jeon, S.-i. Yang, S.-K. Lee, D.-W. Kim, P.~P.
-  Chen, A.~Guitart, P.~Bertens, �.~Periáñez, F.~Hadiji, M.~Müller, Y.~Joo,
-  j.~Lee, I.~Hwang, and K.-J. Kim, ``Game data mining competition on churn
-  prediction and survival analysis using commercial game log data,'' {\em IEEE
-  Transactions on Games}, vol.~11, no.~3, pp.~215--226, 2018.
+E.~Lee, Y.~Jang, D.~M. Yoon, J.~Jeon, S.~i. Yang, S.~K. Lee, D.~W. Kim, P.~P.
+  Chen, A.~Guitart, P.~Bertens, {\'A}.~Periáñez, F.~Hadiji, M.~Müller,
+  Y.~Joo, j.~Lee, I.~Hwang, and K.~J. Kim, ``Game data mining competition on
+  churn prediction and survival analysis using commercial game log data,'' {\em
+  IEEE Transactions on Games}, vol.~11, no.~3, pp.~215--226, 2018.
 
 \bibitem{10.1007/978-3-030-27355-2_10}
 R.~Flunger, A.~Mladenow, and C.~Strauss, ``Game analytics on free to play,'' in
@@ -77,7 +90,7 @@ H.~Xie, S.~Devlin, D.~Kudenko, and P.~Cowling, ``Predicting player
   and Games}, pp.~230--237, IEEE, 2015.
 
 \bibitem{lee2016predicting}
-S.-K. Lee, S.-J. Hong, S.-I. Yang, and H.~Lee, ``Predicting churn in mobile
+S.~K. Lee, S.~J. Hong, S.~I. Yang, and H.~Lee, ``Predicting churn in mobile
   free-to-play games,'' in {\em 2016 International Conference on Information
   and Communication Technology Convergence (ICTC)}, pp.~1046--1048, IEEE, 2016.
 
@@ -108,11 +121,6 @@ Y.~Freund, R.~Schapire, and N.~Abe, ``A short introduction to boosting,'' {\em
 T.~Chen and C.~Guestrin, ``Xgboost: A scalable tree boosting system,'' in {\em
   Proceedings of the 22nd acm sigkdd international conference on knowledge
   discovery and data mining}, pp.~785--794, 2016.
-
-\bibitem{tommy2018baggingandboosting}
-T.~Huang, ``機器學習: Ensemble learning之bagging、boosting和adaboost.''
-  \url{https://medium.com/@chih.sheng.huang821/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-ensemble-learning%E4%B9%8Bbagging-boosting%E5%92%8Cadaboost-af031229ebc3}.
-\newblock [Online; accessed 10-July-2020].
 
 \bibitem{martinez2020machine}
 A.~Mart{\'\i}nez, C.~Schmuck, S.~Pereverzyev~Jr, C.~Pirker, and M.~Haltmeier,
@@ -146,5 +154,39 @@ N.~Chinchor and B.~M. Sundheim, ``Muc-5 evaluation metrics,'' in {\em Fifth
 M.~Kubat, R.~Holte, and S.~Matwin, ``Learning when negative examples abound,''
   in {\em European Conference on Machine Learning}, pp.~146--153, Springer,
   1997.
+
+\bibitem{wu2008top}
+X.~Wu, V.~Kumar, J.~R. Quinlan, J.~Ghosh, Q.~Yang, H.~Motoda, G.~J. McLachlan,
+  A.~Ng, B.~Liu, S.~Y. Philip, Z.-H. Zhou, M.~Steinbach, D.~J. Hand, and
+  D.~Steinberg, ``Top 10 algorithms in data mining,'' {\em Knowledge and
+  information systems}, vol.~14, no.~1, pp.~1--37, 2008.
+
+\bibitem{chawla2009data}
+N.~V. Chawla, ``Data mining for imbalanced datasets: An overview,'' in {\em
+  Data mining and knowledge discovery handbook}, pp.~875--886, Springer, 2009.
+
+\bibitem{4309452}
+I.~Tomek, ``Two modifications of cnn,'' {\em IEEE Transactions on Systems, Man,
+  and Cybernetics}, vol.~SMC-6, no.~11, pp.~769--772, 1976.
+
+\bibitem{smith2014instance}
+M.~R. Smith, T.~Martinez, and C.~Giraud-Carrier, ``An instance level analysis
+  of data complexity,'' {\em Machine learning}, vol.~95, no.~2, pp.~225--256,
+  2014.
+
+\bibitem{batista2003balancing}
+G.~E. Batista, A.~L. Bazzan, and M.~C. Monard, ``Balancing training data for
+  automated annotation of keywords: a case study.,'' in {\em WOB}, pp.~10--18,
+  2003.
+
+\bibitem{liu2008exploratory}
+X.-Y. Liu, J.~Wu, and Z.-H. Zhou, ``Exploratory undersampling for
+  class-imbalance learning,'' {\em IEEE Transactions on Systems, Man, and
+  Cybernetics, Part B (Cybernetics)}, vol.~39, no.~2, pp.~539--550, 2008.
+
+\bibitem{brownlee2020imbalanced}
+J.~Brownlee, {\em Imbalanced Classification with Python: Better Metrics,
+  Balance Skewed Classes, Cost-Sensitive Learning}.
+\newblock Machine Learning Mastery, 2020.
 
 \end{thebibliography}

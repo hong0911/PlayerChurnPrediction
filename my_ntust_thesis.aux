@@ -17,13 +17,16 @@
 \providecommand*\HyPL@Entry[1]{}
 \HyPL@Entry{0<</S/D>>}
 \citation{miller2012gdc}
+\citation{HarvardBusiness}
 \citation{SwrveNewPlayerReport}
+\citation{SupervisedMachineLearning}
 \HyPL@Entry{1<</S/D>>}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}緒論}{1}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {1.1}研究背景與動機}{1}{section.1.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {1.2}研究目標}{1}{section.1.2}\protected@file@percent }
+\citation{tukey1977exploratory}
 \citation{fawcett2006introduction}
 \citation{article}
 \citation{Goutte2005API}
@@ -34,30 +37,29 @@
 \citation{lee2018game}
 \citation{10.1007/978-3-030-27355-2_10}
 \citation{XGBoostTemporalData}
+\citation{SupervisedMachineLearning}
 \citation{lee2018game}
+\citation{XGBoostTemporalData}
 \citation{tamassia2016predicting}
 \citation{perianez2016churn}
 \citation{runge2014churn}
-\citation{lee2018game}
+\citation{sifa2015predicting}
+\citation{PredictionWithEventFrequency}
+\citation{lee2016predicting}
+\citation{XGBoostTemporalData}
+\citation{6932876}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}文獻探討}{4}{chapter.2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{cha:RelatedWork}{{2}{4}{文獻探討}{chapter.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}免費遊戲興起}{4}{section.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}資料前處理}{4}{section.2.2}\protected@file@percent }
-\citation{sifa2015predicting}
-\citation{PredictionWithEventFrequency}
-\citation{lee2016predicting}
-\citation{XGBoostTemporalData}
-\citation{6932876}
 \citation{lee2018game}
 \citation{breiman1996bagging}
 \citation{breiman2001random}
 \citation{breiman1984classification}
 \citation{freund1999short}
 \citation{chen2016xgboost}
-\citation{tommy2018baggingandboosting}
-\citation{tommy2018baggingandboosting}
 \citation{chen2016xgboost}
 \citation{XGBoostTemporalData}
 \citation{martinez2020machine}
@@ -72,40 +74,149 @@
 \newlabel{fig:Bagging}{{2.1}{6}{裝袋算法方式建樹示意圖}{figure.2.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces 提升方法方式建樹示意圖}}{6}{figure.2.2}\protected@file@percent }
 \newlabel{fig:Boosting}{{2.2}{6}{提升方法方式建樹示意圖}{figure.2.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}資料不平衡處理及其評估方式}{6}{section.2.4}\protected@file@percent }
 \citation{chinchor1993muc}
 \citation{kubat1997learning}
 \citation{sifa2015predicting}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}資料不平衡處理及其評估方式}{7}{section.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}研究方法}{8}{chapter.3}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{cha:Method}{{3}{8}{研究方法}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}資料前處理階段}{8}{section.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces 本論文之巨量資料探勘框架示意圖}}{9}{figure.3.1}\protected@file@percent }
+\newlabel{fig:Image_Framework}{{3.1}{9}{本論文之巨量資料探勘框架示意圖}{figure.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}整合資料}{9}{subsection.3.1.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces 資料庫群內資料之示意圖}}{10}{figure.3.2}\protected@file@percent }
+\newlabel{fig:Image_Databases}{{3.2}{10}{資料庫群內資料之示意圖}{figure.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces 依各項遊戲為整合目標之示意圖}}{10}{figure.3.3}\protected@file@percent }
+\newlabel{fig:Image_Integration}{{3.3}{10}{依各項遊戲為整合目標之示意圖}{figure.3.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces 原始資料集示意圖}}{10}{figure.3.4}\protected@file@percent }
+\newlabel{fig:Image_OriginalDatasets}{{3.4}{10}{原始資料集示意圖}{figure.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}資料過濾}{10}{subsection.3.1.2}\protected@file@percent }
+\citation{lee2018game}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2.1}刪除空缺值}{11}{subsubsection.3.1.2.1}\protected@file@percent }
+\newlabel{subsubsec:MissingValueHandle}{{3.1.2.1}{11}{刪除空缺值}{subsubsection.3.1.2.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces 刪除空缺值示意圖}}{11}{figure.3.5}\protected@file@percent }
+\newlabel{fig:Image_MissingValueHandle}{{3.5}{11}{刪除空缺值示意圖}{figure.3.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2.2}無價值玩家資料處理}{11}{subsubsection.3.1.2.2}\protected@file@percent }
+\newlabel{subsubsec:NonValuePlayerHandle}{{3.1.2.2}{11}{無價值玩家資料處理}{subsubsection.3.1.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces 判別有價值與無價值玩家之示意圖}}{12}{figure.3.6}\protected@file@percent }
+\newlabel{fig:Image_DataCleaning}{{3.6}{12}{判別有價值與無價值玩家之示意圖}{figure.3.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}目標值準備}{12}{subsection.3.1.3}\protected@file@percent }
+\newlabel{subsec:ClassPreparation}{{3.1.3}{12}{目標值準備}{subsection.3.1.3}{}}
+\citation{SupervisedMachineLearning}
+\citation{lee2018game}
+\citation{XGBoostTemporalData}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces 非流失玩家與流失玩家之示意圖}}{13}{figure.3.7}\protected@file@percent }
+\newlabel{fig:Image_ClassPreparation}{{3.7}{13}{非流失玩家與流失玩家之示意圖}{figure.3.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}資料特徵探勘與特徵工程}{13}{subsection.3.1.4}\protected@file@percent }
+\newlabel{subsec:FeatureMining}{{3.1.4}{13}{資料特徵探勘與特徵工程}{subsection.3.1.4}{}}
+\citation{sifa2015predicting}
+\citation{lee2016predicting}
+\citation{martinez2020machine}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces 流失玩家與非流失玩家范氏圖}}{14}{figure.3.8}\protected@file@percent }
+\newlabel{fig:Image_ClassVennChart}{{3.8}{14}{流失玩家與非流失玩家范氏圖}{figure.3.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces 特徵工程示意圖}}{14}{figure.3.9}\protected@file@percent }
+\newlabel{fig:Image_FeatureEngineering}{{3.9}{14}{特徵工程示意圖}{figure.3.9}{}}
+\citation{tukey1977exploratory}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}資料分析階段}{15}{section.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}探索性資料分析}{15}{subsection.3.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces 探索性資料分析之使用圖表類型}}{15}{figure.3.10}\protected@file@percent }
+\newlabel{fig:Image_EDADiagrams}{{3.10}{15}{探索性資料分析之使用圖表類型}{figure.3.10}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {長條圖}}}{15}{figure.3.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {散佈圖}}}{15}{figure.3.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1.1}高資訊量之資料特徵}{15}{subsubsection.3.2.1.1}\protected@file@percent }
+\newlabel{subsubsec:ValuableFeatures}{{3.2.1.1}{15}{高資訊量之資料特徵}{subsubsection.3.2.1.1}{}}
+\citation{lee2018game}
+\citation{sifa2015predicting}
+\citation{breiman1984classification}
+\citation{breiman2001random}
+\citation{chen2016xgboost}
+\citation{lee2018game}
+\citation{sifa2015predicting}
+\citation{wu2008top}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}機器學習階段}{16}{section.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}分割訓練與測試資料集}{16}{subsection.3.3.1}\protected@file@percent }
+\newlabel{subsec:SplitDataset}{{3.3.1}{16}{分割訓練與測試資料集}{subsection.3.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces 分割訓練與測試資料集示意圖}}{16}{figure.3.11}\protected@file@percent }
+\newlabel{fig:Image_SplitDataset}{{3.11}{16}{分割訓練與測試資料集示意圖}{figure.3.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}學習模型選擇}{16}{subsection.3.3.2}\protected@file@percent }
+\newlabel{subsec:ModelSelection}{{3.3.2}{16}{學習模型選擇}{subsection.3.3.2}{}}
+\citation{breiman1984classification}
+\citation{breiman2001random}
+\citation{chen2016xgboost}
+\citation{sifa2015predicting}
+\citation{lee2016predicting}
+\citation{chawla2009data}
+\citation{4309452}
+\citation{smith2014instance}
+\citation{chawla2002smote}
+\citation{batista2003balancing}
+\citation{liu2008exploratory}
+\newlabel{eq:GiniImpurityFormula}{{3.1}{17}{學習模型選擇}{equation.3.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}資料不平衡處理}{17}{subsection.3.3.3}\protected@file@percent }
+\newlabel{subsec:ImbalancedDataHandle}{{3.3.3}{17}{資料不平衡處理}{subsection.3.3.3}{}}
+\citation{brownlee2020imbalanced}
+\newlabel{eq:SampleWeightFormula}{{3.2}{18}{資料不平衡處理}{equation.3.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}搜尋最佳參數解}{18}{subsection.3.3.4}\protected@file@percent }
+\newlabel{subsec:TuningBestParams}{{3.3.4}{18}{搜尋最佳參數解}{subsection.3.3.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces 學習模型參數調教表}}{18}{table.3.1}\protected@file@percent }
+\newlabel{tab:ModelParamsTuning}{{3.1}{18}{學習模型參數調教表}{table.3.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces 學習模型參數說明表}}{18}{table.3.2}\protected@file@percent }
+\newlabel{tab:ModelParamsDescription}{{3.2}{18}{學習模型參數說明表}{table.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.5}交叉驗證 ( Cross Validation ) }{18}{subsection.3.3.5}\protected@file@percent }
+\newlabel{subsec:CrossValidation}{{3.3.5}{18}{交叉驗證 ( Cross Validation )}{subsection.3.3.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces RepeatedStratifiedKFold示意圖}}{19}{figure.3.12}\protected@file@percent }
+\newlabel{fig:Image_RepeatedStratifiedKFold}{{3.12}{19}{RepeatedStratifiedKFold示意圖}{figure.3.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.6}評估驗證最佳模型}{19}{subsection.3.3.6}\protected@file@percent }
+\newlabel{subsec:EvaluateBestModel}{{3.3.6}{19}{評估驗證最佳模型}{subsection.3.3.6}{}}
+\newlabel{eq:FbetaFormula}{{3.3}{20}{評估驗證最佳模型}{equation.3.3.3}{}}
+\newlabel{eq:WeightedFbetaFormula}{{3.4}{20}{評估驗證最佳模型}{equation.3.3.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces $\beta $數值意義表}}{20}{table.3.3}\protected@file@percent }
+\newlabel{tab:beta}{{3.3}{20}{$\beta $數值意義表}{table.3.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}預測結果分析階段}{20}{section.3.4}\protected@file@percent }
+\newlabel{eq:GiniImportanceFormula}{{3.5}{21}{預測結果分析階段}{equation.3.4.5}{}}
+\newlabel{eq:SingleTreeFeatureImportanceFormula}{{3.6}{21}{預測結果分析階段}{equation.3.4.6}{}}
+\newlabel{eq:ModelFeatureImportanceFormula}{{3.7}{21}{預測結果分析階段}{equation.3.4.7}{}}
 \bibstyle{ieeetr}
 \bibdata{my_bib}
 \bibcite{miller2012gdc}{1}
-\bibcite{SwrveNewPlayerReport}{2}
-\bibcite{fawcett2006introduction}{3}
-\bibcite{article}{4}
-\bibcite{Goutte2005API}{5}
-\bibcite{wiki:f2p}{6}
-\bibcite{lee2018game}{7}
-\bibcite{10.1007/978-3-030-27355-2_10}{8}
-\bibcite{XGBoostTemporalData}{9}
-\bibcite{tamassia2016predicting}{10}
-\bibcite{perianez2016churn}{11}
-\@writefile{toc}{\contentsline {chapter}{參考文獻}{8}{section*.1}\protected@file@percent }
-\bibcite{runge2014churn}{12}
-\bibcite{sifa2015predicting}{13}
-\bibcite{PredictionWithEventFrequency}{14}
-\bibcite{lee2016predicting}{15}
-\bibcite{6932876}{16}
-\bibcite{breiman1996bagging}{17}
-\bibcite{breiman2001random}{18}
-\bibcite{breiman1984classification}{19}
-\bibcite{freund1999short}{20}
-\bibcite{chen2016xgboost}{21}
-\bibcite{tommy2018baggingandboosting}{22}
-\bibcite{martinez2020machine}{23}
-\bibcite{semenov2016performance}{24}
-\bibcite{janusz2017helping}{25}
-\bibcite{chawla2002smote}{26}
-\bibcite{chinchor1993muc}{27}
-\bibcite{kubat1997learning}{28}
+\bibcite{HarvardBusiness}{2}
+\bibcite{SwrveNewPlayerReport}{3}
+\bibcite{SupervisedMachineLearning}{4}
+\bibcite{tukey1977exploratory}{5}
+\bibcite{fawcett2006introduction}{6}
+\bibcite{article}{7}
+\bibcite{Goutte2005API}{8}
+\bibcite{wiki:f2p}{9}
+\bibcite{lee2018game}{10}
+\bibcite{10.1007/978-3-030-27355-2_10}{11}
+\bibcite{XGBoostTemporalData}{12}
+\@writefile{toc}{\contentsline {chapter}{參考文獻}{22}{section*.1}\protected@file@percent }
+\bibcite{tamassia2016predicting}{13}
+\bibcite{perianez2016churn}{14}
+\bibcite{runge2014churn}{15}
+\bibcite{sifa2015predicting}{16}
+\bibcite{PredictionWithEventFrequency}{17}
+\bibcite{lee2016predicting}{18}
+\bibcite{6932876}{19}
+\bibcite{breiman1996bagging}{20}
+\bibcite{breiman2001random}{21}
+\bibcite{breiman1984classification}{22}
+\bibcite{freund1999short}{23}
+\bibcite{chen2016xgboost}{24}
+\bibcite{martinez2020machine}{25}
+\bibcite{semenov2016performance}{26}
+\bibcite{janusz2017helping}{27}
+\bibcite{chawla2002smote}{28}
+\bibcite{chinchor1993muc}{29}
+\bibcite{kubat1997learning}{30}
+\bibcite{wu2008top}{31}
+\bibcite{chawla2009data}{32}
+\bibcite{4309452}{33}
+\bibcite{smith2014instance}{34}
+\bibcite{batista2003balancing}{35}
+\bibcite{liu2008exploratory}{36}
+\bibcite{brownlee2020imbalanced}{37}
 \ttl@finishall
-\gdef \@abspage@last{11}
+\gdef \@abspage@last{26}

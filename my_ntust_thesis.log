@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.5.4)  20 MAY 2022 19:23
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.5.4)  29 JUN 2022 17:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -779,11 +779,52 @@ Chapter 2.
 [4
 
 ]
-File: figures/Image_Bagging.pdf Graphic file (type pdf)
-<use figures/Image_Bagging.pdf>
-File: figures/Image_Boosting.pdf Graphic file (type pdf)
-<use figures/Image_Boosting.pdf>
- [5] [6]) (./backpages/ntust_backpages.tex [7] (./my_ntust_thesis.bbl
+File: figures/Image_Bagging.png Graphic file (type bmp)
+<figures/Image_Bagging.png>
+File: figures/Image_Boosting.png Graphic file (type bmp)
+<figures/Image_Boosting.png>
+ [5] [6]) (./sections/method.tex [7]
+Chapter 3.
+File: figures/Image_Framework.png Graphic file (type bmp)
+<figures/Image_Framework.png>
+[8
+
+]
+File: figures/Image_Databases.png Graphic file (type bmp)
+<figures/Image_Databases.png>
+File: figures/Image_Integration.png Graphic file (type bmp)
+<figures/Image_Integration.png>
+File: figures/Image_OriginalDatasets.png Graphic file (type bmp)
+<figures/Image_OriginalDatasets.png>
+ [9] [10]
+File: figures/Image_MissingValueHandle.png Graphic file (type bmp)
+<figures/Image_MissingValueHandle.png>
+ [11]
+File: figures/Image_DataCleaning.png Graphic file (type bmp)
+<figures/Image_DataCleaning.png>
+ [12]
+File: figures/Image_ClassPreparation.png Graphic file (type bmp)
+<figures/Image_ClassPreparation.png>
+File: figures/Image_ClassVennChart.png Graphic file (type bmp)
+<figures/Image_ClassVennChart.png>
+ [13]
+File: figures/Image_FeatureEngineering.png Graphic file (type bmp)
+<figures/Image_FeatureEngineering.png>
+ [14]
+File: figures/Image_BarDiagram.png Graphic file (type bmp)
+<figures/Image_BarDiagram.png>
+File: figures/Image_ScatterDiagram.png Graphic file (type bmp)
+<figures/Image_ScatterDiagram.png>
+ [15]
+
+LaTeX Warning: Reference `subsubsec:UnreasonableFeatures' on page 16 undefined on input line 239.
+
+File: figures/Image_SplitDataset.png Graphic file (type bmp)
+<figures/Image_SplitDataset.png>
+[16] [17] [18]
+File: figures/Image_RepeatedStratifiedKFold.png Graphic file (type bmp)
+<figures/Image_RepeatedStratifiedKFold.png>
+ [19] [20] [21]) (./backpages/ntust_backpages.tex (./my_ntust_thesis.bbl
 Underfull \hbox (badness 10000) detected at line 1
 \TU/標楷體(0)/b/n/20.74 參 考 文 獻
  []
@@ -794,48 +835,39 @@ Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 (xeCJK)                Try to use `\setCJKmonofont[...]{...}' to define it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--11
+Underfull \hbox (badness 10000) in paragraph at lines 12--15
 []\TU/TimesNewRoman(0)/m/n/12 Swrve, “The april 2014 new players report.” []$[][][][][] [] [] [] [][][] [] [][][][][] [] [][][] []
  []
 
 
-Underfull \hbox (badness 3068) in paragraph at lines 26--31
+Underfull \hbox (badness 3068) in paragraph at lines 39--44
 []\TU/TimesNewRoman(0)/m/n/12 Wikipedia contributors, “Free-to-play — Wikipedia, the free encyclopedia.”
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--31
+Underfull \hbox (badness 10000) in paragraph at lines 39--44
 []$[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [][][] [] [] [] [][][][][] [] [][][] [] [][][][][] [] [][][][][][][][][][][][][][] [] [][][][][] []
  []
 
-Invalid UTF-8 byte or sequence at line 34 replaced by U+FFFD.
-Missing character: There is no � (U+FFFD) in font Times New Roman/OT:script=latn;language=dflt;mapping=tex-text;!
-[8
+[22
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 113--116
-[]$[][][][][] [] [] [] [][][][][][] [] [][][] [] [][][][][] [] [][][][][] [] [][][][][][][][] [] [][][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 113--116
-[][] [] [][] [] [][] [] [][] [] [][][][][][][][][][][][][][][][][][][][][][] [] [][] [] [][] [] [][][][][][][][][][][][][][][][][][][] [] [][] [] [][] []
- []
-
-[9])) [10] (./my_ntust_thesis.aux)
+] [23] [24])) [25] (./my_ntust_thesis.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `my_ntust_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 3C9CEE3A3B81845841B453823B1EBA52;1171.
+(rerunfilecheck)             Checksum: 94F7986DB46D0159E15ADC1C14BFD119;3480.
  ) 
 Here is how much of TeX's memory you used:
- 17986 strings out of 478090
- 358379 string characters out of 5852452
- 727573 words of memory out of 5000000
- 38313 multiletter control sequences out of 15000+600000
- 475572 words of font info for 84 fonts, out of 8000000 for 9000
+ 18169 strings out of 478090
+ 364187 string characters out of 5852452
+ 729818 words of memory out of 5000000
+ 38475 multiletter control sequences out of 15000+600000
+ 475604 words of font info for 88 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 72i,11n,85p,816b,466s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,12n,85p,778b,464s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on my_ntust_thesis.pdf (11 pages).
+Output written on my_ntust_thesis.pdf (26 pages).
