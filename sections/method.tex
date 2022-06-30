@@ -1,7 +1,7 @@
 \chapter{研究方法}
 \label{cha:Method}
 
-針對遊戲領域巨量資料進行新進玩家流失預測，我們先將資料進行前處理以及預測前之資料分析，隨後訓練機器學習與其最佳化處理，最後再依預測之結果導入資料特徵重要性分析之中，完成整體預測與分析之工作。
+針對遊戲領域巨量資料進行新進玩家流失預測，先將資料進行前處理以及預測前之資料分析，隨後訓練機器學習與其最佳化處理，最後再依預測之結果導入資料特徵重要性分析之中，完成整體預測與分析之工作。
 
 為求研究效率能夠快速且有效，本論文對此議題運用一巨量資料探勘框架，圖~\ref{fig:Image_Framework} 為巨量資料探勘框架示意圖，此框架將由五大階段組成：
 
@@ -10,7 +10,7 @@
   \item[■] 資料分析階段：使用前階段產出之有價值原始資料進行探索性資料分析，觀察資料特徵是否可以提供給學習模型較多之資訊。
   \item[■] 機器學習階段：首先將有價值原始資料集進行分割為訓練及測試集，隨後針對訓練集進行交叉驗證搭配配參數表，以獲得模型的最佳參數解，最後藉由測試集來驗證評估最佳模型，產出預測結果。
   \item[■] 預測結果分析階段：使用前階段產出之預測結果進行資料特徵重要性分析，以利更加了解及解釋資料特徵與遊戲所提供之體驗綜合評估。
-  \item[■] 產業應用分析階段：運用代理人模型 ( Surrogate Model )。
+  \item[■] 產業應用分析階段：參考代理人模型 ( Surrogate Model )~\cite{wiki:SurrogateModel}，用較簡單的模型來模擬較複雜的模型，能協助了解流失玩家的行為規則。
 \end{itemize} 
 
 \begin{figure}[!htb]
@@ -20,6 +20,7 @@
     \label{fig:Image_Framework}
   \end{center}
 \end{figure}
+\newpage
 
 \section{資料前處理階段}
 
@@ -62,6 +63,7 @@
 \end{figure}
 
 \subsection{資料過濾}
+\label{subsec:DataFilter}
 
 此步驟將針對兩大議題：刪除空缺值與無價值玩家資料處理。
 
@@ -70,7 +72,7 @@
 \subsubsection{刪除空缺值}
 \label{subsubsec:MissingValueHandle}
 
-為了後續資料特徵重要性分析，希望能保持著資料間的真實性，我們將採用直接刪去具有空缺值樣本的方式，而不對資料集填入經過處理之假數值，每筆樣本只要在任意資料特徵中擁有一空缺值，即視為欲刪除之對象。
+為了後續資料特徵重要性分析，希望能保持著資料間的真實性，將採用直接刪去具有空缺值樣本的方式，而不對資料集填入經過處理之假數值，每筆樣本只要在任意資料特徵中擁有一空缺值，即視為欲刪除之對象。
 
 圖~\ref{fig:Image_MissingValueHandle} 為刪除空缺值之示意圖，從圖中可以看出樣本ID 1及2分別在特徵3及1擁有空缺值，將對兩者予以刪除，故最後只留下樣本ID 0及3之資料。
 
@@ -85,7 +87,7 @@
 \subsubsection{無價值玩家資料處理}
 \label{subsubsec:NonValuePlayerHandle}
 
-對於遊戲領域巨量資料進行研究時，普遍會對所有玩家進行篩檢，以挑選出有價值之玩家族群~\cite{lee2018game}，可使整體分析與預測更加貼近於真實遊戲情景。參考前述之概念，我們將對原始資料集中之玩家進行篩檢。定義一時間框架於新進玩家創帳號後，又將其切分為三個時期：
+對於遊戲領域巨量資料進行研究時，普遍會對所有玩家進行篩檢，以挑選出有價值之玩家族群，可使整體分析與預測更加貼近於真實遊戲情景。定義一時間框架於新進玩家創帳號後，又將其切分為三個時期：
 
 \begin{itemize}
   \item [■] 觀察期：玩家創立帳號後前$O$天。觀察玩家在此時期的行為軌跡，並將對其進行特徵工程，因此，也將觀察期視為資料特徵探勘期。
@@ -127,7 +129,7 @@
   \end{center}
 \end{figure}
 
-本論文將預測目標聚焦於流失的新進玩家，所以我們透過觀察期與表現期來侷限流失玩家之定義。圖~\ref{fig:Image_ClassVennChart} 為流失玩家與非流失玩家范氏圖，可以從圖中看出，最外圍之黑圓框代表所有玩家 (於 \ref{subsubsec:NonValuePlayerHandle}~小節中，篩檢後之有價值玩家) ，而藍色底之圓形範圍代表所有非流失玩家 ( $class\ 0$ ) ，內圈之綠圓框代表前述流失定義門檻，綠圓框內之紅色底圓型範圍則代表所有流失玩家 ( $class\ 1$ )，其中深紅色底之圓形範圍代表表現期後無登入紀錄的玩家；淺紅色底之圓形範圍代表表現期後有登入紀錄的玩家。可以由上述說明來了解到資料內流失玩家與非流失玩家之分佈狀況及其關係。
+本論文將預測目標聚焦於流失的新進玩家，所以透過觀察期與表現期來侷限流失玩家之定義。圖~\ref{fig:Image_ClassVennChart} 為流失玩家與非流失玩家范氏圖，可以從圖中看出，最外圍之黑圓框代表所有玩家 (於 \ref{subsubsec:NonValuePlayerHandle}~小節中，篩檢後之有價值玩家) ，而藍色底之圓形範圍代表所有非流失玩家 ( $class\ 0$ ) ，內圈之綠圓框代表前述流失定義門檻，綠圓框內之紅色底圓型範圍則代表所有流失玩家 ( $class\ 1$ )，其中深紅色底之圓形範圍代表表現期後無登入紀錄的玩家；淺紅色底之圓形範圍代表表現期後有登入紀錄的玩家。可以由上述說明來了解到資料內流失玩家與非流失玩家之分佈狀況及其關係。
 
 \begin{figure}[!htb]
   \begin{center}
@@ -140,11 +142,11 @@
 \subsection{資料特徵探勘與特徵工程}
 \label{subsec:FeatureMining}
 
-此步驟將探勘供機器學習使用之資料特徵。在遊戲領域巨量資料中，相較於在學習模型上進行深入研究與改進，透過資料特徵之轉化及選擇顯得更為重要且有效~\cite{SupervisedMachineLearning}~\cite{lee2018game}~\cite{XGBoostTemporalData}，所以我們將對資料集進行不同面向之探勘，以獲取更多的資訊，讓後續資料分析以及機器學習更加順利。
+此步驟將探勘供機器學習使用之資料特徵。在遊戲領域巨量資料中，相較於在學習模型上進行深入研究與改進，透過資料特徵之轉化及選擇顯得更為重要且有效。所以對資料集進行不同面向之探勘，除了可以獲取更多的資訊，也能讓後續資料分析以及機器學習更加順利。
 
 本文將觀察期作為資料特徵探勘期，對每位玩家進行資料特徵探勘，自玩家創立帳號日之$O$天內，探勘其所需之資料特徵。資料特徵之探勘面向將參考於~\cite{sifa2015predicting}~\cite{lee2016predicting}~\cite{martinez2020machine}之探勘想法，主要聚焦於玩家之行為軌跡，並將其進行特徵工程與設計綜合指標特徵。
 
-圖~\ref{fig:Image_FeatureEngineering} 為特徵工程示意圖。對資料集以多種統計方式建立資料特徵，並用多個時間框架做拆分，以獲得第一層特徵變數，再對第一層特徵變數做計算，進一步來得到第二層特徵變數，如變化量特徵等。
+圖~\ref{fig:Image_FeatureEngineering} 為特徵工程示意圖。紅色箭頭為第一層特徵變數建立方式，對資料集以多種統計方式建立資料特徵，並用多個時間框架做拆分，以獲得第一層特徵變數；藍色箭頭為第二層特徵變數建立方式，針對第一層特徵變數做計算，進一步來得到第二層特徵變數，如變化量特徵等。
 
 \begin{figure}[!htb]
   \begin{center}
@@ -154,10 +156,10 @@
   \end{center}
 \end{figure}
 
-最終我們將資料特徵種類分為三大類：
+最終可以將資料特徵種類分為三大類：
 
 \begin{itemize}
-  \item[■] 玩家資料：包含玩家自身相關資訊。如創帳號國家、玩家等級等。
+  \item[■] 玩家輪廓資料：包含玩家自身相關資訊。如創帳號國家、玩家等級等。
   \item[■] 玩家平台操作紀錄：包含玩家以平台為探勘範疇之行為軌跡。如消費紀錄、客訴紀錄等。
   \item[■] 玩家遊戲行為軌跡：包含玩家以遊戲為探勘範疇之行為軌跡。如押注次數、贏分等。
 \end{itemize}
@@ -195,7 +197,7 @@
 此階段將著重於資料的分析。為求在訓練機器學習前，可以藉由資料分析之方法來了解到資料之特性，以提高後續解讀資料特徵之重要性與其相關之連結。另外，還觀察資料特徵是否可以提供給學習模型較多的資訊。
 
 \subsection{探索性資料分析}
-我們將採用探索性資料分析~\cite{tukey1977exploratory} 來藉由圖表呈現協助了解資料之特性，並且檢查高資訊量之資料特徵，此步驟將利用下列兩種圖表來觀察資料特性：
+採用探索性資料分析，藉由圖表呈現協助了解資料之特性，並且檢查高資訊量之資料特徵，此步驟將利用下列兩種圖表來觀察資料特性：
 
 \begin{itemize}
   \item [■] 長條圖：觀察資料特徵分布情況，如圖~\ref{fig:Image_EDADiagrams} (a)。
@@ -231,17 +233,17 @@
 
 \section{機器學習階段}
 
-此階段將著重於機器學習訓練以及資料不平衡處理，最後產出最佳模型之預測結果，提供給流失玩家之預測分析以及資料特徵重要性分析使用，我們將選擇樹狀結構之學習模型進行訓練，樹狀結構之學習模型對於巨量資料分類預測顯得更為合適，並且對於預測結果之解釋也相對清楚~\cite{lee2018game}~\cite{sifa2015predicting}，而本論文所挑選之學習模型包含：決策樹~\cite{breiman1984classification}、隨機森林~\cite{breiman2001random}與極限梯度提升~\cite{chen2016xgboost}。
+此階段將著重於機器學習訓練以及不平衡資料權重調整，最後產出最佳模型之預測結果，提供給流失玩家之預測分析以及資料特徵重要性分析使用。本文選擇樹狀結構之學習模型進行訓練，樹狀結構之學習模型對於巨量資料分類預測顯得更為合適，並且對於預測結果之解釋也相對清楚，而本論文所挑選之學習模型包含：決策樹、隨機森林與極限梯度提升。
 
 \subsection{分割訓練與測試資料集}
 \label{subsec:SplitDataset}
 
-透過前述 \ref{subsubsec:UnreasonableFeatures}~小節排除不合理資料特徵之資料集，進行訓練集與測試集分割，並按照 7：3 之比例隨機分配。為了避免隨機切割時，目標類別分布不平衡，我們採分類隨機抽樣，即流失玩家與非流失玩家各別以 7：3 之比例隨機抽樣，如圖~\ref{fig:Image_SplitDataset}。
+透過前述 \ref{subsec:DataFilter}~小節過濾後之資料集，進行訓練集與測試集分割，並按照 $X$：$Y$ 之比例隨機分配。為了避免隨機切割時，目標類別分布不平衡，將採分類隨機抽樣，即流失玩家與非流失玩家各別以 $X$：$Y$ 之比例隨機抽樣，如圖~\ref{fig:Image_SplitDataset}。
 
 \begin{figure}[!htb]
   \begin{center}
     \includegraphics[width=0.8\textwidth]{figures/Image_SplitDataset.png}
-    \caption[分割訓練與測試資料集示意圖]{分割訓練與測試資料集示意圖}
+    \caption[分割訓練與測試資料集示意圖]{分割訓練與測試資料集示意圖 (以$X$、$Y$分別為 7、3 為例) }
     \label{fig:Image_SplitDataset}
   \end{center}
 \end{figure}
@@ -249,12 +251,12 @@
 \subsection{學習模型選擇}
 \label{subsec:ModelSelection}
 
-我們將選擇樹狀結構的學習模型進行訓練。樹狀結構的學習模型對於巨量資料分類預測顯得更為合適，並且對於預測結果之解釋也相對清楚~\cite{lee2018game}~\cite{sifa2015predicting}，是研究中常使用的學習模型~\cite{wu2008top}，因其模型結構能夠清楚表現每筆樣本之預測路徑，可以協助我們了解到學習模型如何做出決策，如白箱模型 ( white box model )；而神經網路結構之學習模型，其模型內的結構難以解析，如黑箱模型 ( black box model )，無法協助我們進行更一步的研究。而本論文所挑選之學習模型包含：
+本文選擇樹狀結構的學習模型進行訓練。樹狀結構的學習模型對於巨量資料分類預測顯得更為合適，並且對於預測結果之解釋也相對清楚，是研究中常使用的學習模型~\cite{wu2008top}，因其模型結構能夠清楚表現每筆樣本之預測路徑，可以協助了解到學習模型如何做出決策，如白箱模型 ( white box model )；而神經網路結構之學習模型，其模型內的結構難以解析，如黑箱模型 ( black box model )，則無法進行更一步的研究。而本論文所挑選之學習模型包含：
 
 \begin{itemize}
-  \item [■] 決策樹~\cite{breiman1984classification}：樹狀結構學習模型之最基礎結構，單樹結構，採用CART ( Classification and Regression Tree ) 演算法進行建樹。
-  \item [■] 隨機森林~\cite{breiman2001random}：多樹結構，採用裝袋算法建樹。
-  \item [■] 極限梯度提升~\cite{chen2016xgboost}：多樹結構，採用提升方法建樹。
+  \item [■] 決策樹：樹狀結構學習模型之最基礎結構，單樹結構，採用CART ( Classification and Regression Tree ) 演算法進行建樹。
+  \item [■] 隨機森林：多樹結構，採用裝袋算法建樹。
+  \item [■] 極限梯度提升：多樹結構，採用提升方法建樹。
 \end{itemize}
 
 上述三種學習模型之資訊量計算以基尼不純度 ( Gini Impurity, $G$ ) 為主，如式~\ref{eq:GiniImpurityFormula}，其中$c$為$Class$、$p(i)$為$c$之發生機率。透過基尼不純度 ( $G$ ) 來衡量建樹時之分類準則，挑選出最適合用來進行分割之資料特徵及數值。
@@ -266,12 +268,12 @@
 
 最後將比較上述三種不同學習模型來挑選出最佳之模型，包含裝袋算法與提升方法不同方式之建樹差異。
 
-\subsection{資料不平衡處理}
+\subsection{不平衡資料權重調整}
 \label{subsec:ImbalancedDataHandle}
 
-進行機器學習訓練於遊戲領域巨量資料時，往往將會遭受資料不平衡之問題，進而影響學習模型之成效與可靠度~\cite{sifa2015predicting}~\cite{lee2016predicting}~\cite{chawla2009data}。普遍研究中將針對資料集進行預處理，設法解決資料不平衡之問題，例如：Under-Sampling：TomekLinks~\cite{4309452}、InstanceHardnessThreshold~\cite{smith2014instance}與RandomUnderSampler；Over-Sampling：SMOTE~\cite{chawla2002smote}與RandomOverSampler；Combination of Under- and Over-sampling：SMOTETomek~\cite{batista2003balancing}；Ensemble：EasyEnsemble~\cite{liu2008exploratory}。
+進行機器學習訓練於遊戲領域巨量資料時，往往將會遭受資料不平衡之問題，進而影響學習模型之成效與可靠度。
 
-為了確保資料間之真實性，我們於處理資料不平衡時，不希望針對資料集進行加工，如上述之Under-Sampling、Over-Sampling以及Combination of Under- and Over-Sampling，此類處理方式皆將會對原始資料集進行破壞，無法呈現出真實資料集之特性，所以本論文將重點放於訓練學習模型時的樣本權重影響，而不對資料集進行直接處理。樣本權重設置如式~\ref{eq:SampleWeightFormula}，其中$N_0$為非流失玩家 ( $class\ 0$ )之樣本數；$N_1$為流失玩家 ( $class\ 1$ )之樣本數。將計算$N_0$與$N_1$之比例差距，此值則為非流失玩家 ( $class\ 0$ )樣本權重放大倍數。
+普遍研究中將針對資料集進行預處理， 設法解決資料不平衡之問題，如SMOTE，為了讓少數群之樣本數與多數群相等，會於原始資料集中放入模擬資料。但本文為了確保資料間之真實性，於處理不平衡資料時，不希望針對資料集進行加工，會無法呈現出真實資料集之特性，所以本文將重點放於訓練學習模型時的樣本權重影響，而不對資料集進行直接處理。樣本權重設置如式~\ref{eq:SampleWeightFormula}，其中$N_0$為非流失玩家 ( $class\ 0$ )之樣本數；$N_1$為流失玩家 ( $class\ 1$ )之樣本數。將計算$N_0$與$N_1$之比例差距，此值則為非流失玩家 ( $class\ 0$ )樣本權重放大倍數。
 
 \begin{equation}
   \label{eq:SampleWeightFormula}
@@ -322,14 +324,14 @@
 \subsection{交叉驗證 ( Cross Validation ) }
 \label{subsec:CrossValidation}
 
-針對訓練資料集進行交叉驗證 ( Cross Validation ) ，並且搭配前頁之參數調教，最後輸出最佳模型，我們將參考~\cite{brownlee2020imbalanced}中所使用之RepeatedStratifiedKFold方法，其中使用Stratified方式分割，即為在各Fold中，付費玩家與非付費玩家之資料比例將會相等；使用Repeated方式反覆驗證，即為反覆執行上述之交叉驗證。透過上述之分割方式，可以在每次訓練學習模型時，使真實訓練集保持著原始訓練集的付費玩家與非付費玩家比例。
+針對訓練資料集進行交叉驗證 ( Cross Validation )，並且搭配前頁之參數調教，最後輸出最佳模型。參考了~\cite{brownlee2020imbalanced}中所使用之RepeatedStratifiedKFold方法，其中使用Stratified方式分割，即為在各Fold中，流失玩家與非流失玩家之資料比例將會相等；使用Repeated方式反覆驗證，即為反覆執行上述之交叉驗證。透過上述之分割方式，可以在每次訓練學習模型時，使真實訓練集保持著原始訓練集的流失玩家與非流失玩家比例。
 
-圖~\ref{fig:Image_RepeatedStratifiedKFold} 為RepeatedStratifiedKFold示意圖，假設Repeated為2；KFold為3時。可以從圖中看出，首先依照前述 \ref{subsec:SplitDataset}~小節，從所有資料初步分割出原始訓練集與測試集，再針對原始訓練集進行RepeatedStratifiedKFold，進行了兩次的交叉驗證，而每次分割原始訓練集時可以看到淺藍底之真實訓練集與淺橘底之驗證集中的付費玩家與非付費玩家比例與原始測試集相等，並且真實訓練集與驗證集中的付費玩家與非付費玩家比例也相等。
+圖~\ref{fig:Image_RepeatedStratifiedKFold} 為RepeatedStratifiedKFold示意圖。可以從圖中看出，首先依照前述 \ref{subsec:SplitDataset}~小節，從所有資料初步分割出原始訓練集與測試集，再針對原始訓練集進行RepeatedStratifiedKFold，進行了兩次的交叉驗證，而每次分割原始訓練集時可以看到淺藍底之真實訓練集與淺橘底之驗證集中的流失玩家與非流失玩家比例與原始測試集相等，並且真實訓練集與驗證集中的流失玩家與非流失玩家比例也相等。
 
 \begin{figure}[!htb]
   \begin{center}
     \includegraphics[width=0.7\textwidth]{figures/Image_RepeatedStratifiedKFold.png}
-    \caption[RepeatedStratifiedKFold示意圖]{RepeatedStratifiedKFold示意圖 (假設Repeated為2；KFold為3時) }
+    \caption[RepeatedStratifiedKFold示意圖]{RepeatedStratifiedKFold示意圖 (以Repeated、KFold分別為 2、3 為例) }
     \label{fig:Image_RepeatedStratifiedKFold}
   \end{center}
 \end{figure}
@@ -372,9 +374,9 @@
 
 \section{預測結果分析階段}
 
-此階段將著重於資料特徵重要性之分析，透過前述 \ref{subsec:EvaluateBestModel}~小節所產出之預測結果，計算其資料特徵於各學習模型中各樹之重要性，並加總後正規化。產出之分析結果將與前述 \ref{subsubsec:ValuableFeatures}~小節中推測之資料特徵進行探討，並藉由最終結果對遊戲中的遊玩體驗進行評估與建議。
+此階段將著重於資料特徵重要性之分析。透過前述 \ref{subsec:EvaluateBestModel}~小節所產出之預測結果，計算其資料特徵於各學習模型中各樹之重要性，並加總後正規化，產出之分析結果將與前述 \ref{subsubsec:ValuableFeatures}~小節中推測之資料特徵進行探討，並藉由最終結果對遊戲中的遊玩體驗進行評估與建議。
 
-我們將資料特徵重要性 ( Feature Importance, $fi$ ) 定義為加總各樹中各資料特徵於節點分割時所提供之基尼不純度 ( $G$ ) ( 見式~\ref{eq:GiniImpurityFormula} ) ，稱為基尼重要性 ( Gini Importance, $GI$ )，再將其正規化至區間[0,1]中。
+將資料特徵重要性 ( Feature Importance, $fi$ ) 定義為加總各樹中各資料特徵於節點分割時所提供之基尼不純度 ( $G$ ) ( 見式~\ref{eq:GiniImpurityFormula} ) ，稱為基尼重要性 ( Gini Importance, $GI$ )，再將其正規化至區間[0,1]中。
 
 式~\ref{eq:GiniImportanceFormula} 為計算樹中各節點之基尼重要性 ( $GI$ )，其中$D_p$為父節點、$N_p$為父節點之樣本數、$D_{left}$為左子節點、$N_{left}$為左子節點之樣本數、$D_{right}$為右子節點、$N_{right}$為右子節點之樣本數。首先計算$D_p$、$D_{left}$及$D_{right}$之基尼不純度 ( $G$ )，並計算$D_{left}$及$D_{right}$之樣本數權重比例，最後將$D_p$之基尼不純度 ( $G$ ) 減去兩權重值。
 
@@ -396,4 +398,8 @@
   \label{eq:ModelFeatureImportanceFormula}
   fi(x) = \frac{\sum_{\ t\ \in\ all\ trees}fi(t,x)}{N_{trees}}
 \end{equation}
+
+\section{產業應用分析階段}
+
+此階段將著重於建立代理人模型。代理人模型為一種優化方法，當模型較為複雜、計算量較大時，可以用一簡化模型來替代，例如：用決策樹作為極限梯度提升之代理人模型，結構上較為簡單，在解釋玩家流失的行為規則上也較為清楚。
 \newpage

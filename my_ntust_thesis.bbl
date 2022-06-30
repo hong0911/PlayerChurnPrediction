@@ -9,9 +9,10 @@ F.~Reichheld and W.~Sasser, ``Zero defects: quality comes to service,'' {\em
   Harvard Business Review, September/October}, pp.~105--111, 1990.
 
 \bibitem{SwrveNewPlayerReport}
-{Swrve}, ``The april 2014 new players report.''
+{The Team at Swrve}, ``The april 2014 new players report.''
   \url{https://www.swrve.com/resources/weblog/the-april-2014-new-players-report},
   2014.
+\newblock [Online; accessed 30-June-2022].
 
 \bibitem{SupervisedMachineLearning}
 K.~Mustač, K.~Bačić, L.~Skorin-Kapov, and M.~Sužnjević, ``Predicting
@@ -37,10 +38,8 @@ C.~Goutte and {\'E}.~Gaussier, ``A probabilistic interpretation of precision,
 
 \bibitem{wiki:f2p}
 {Wikipedia contributors}, ``Free-to-play --- {Wikipedia}{,} the free
-  encyclopedia.''
-  \url{https://en.wikipedia.org/w/index.php?title=Free-to-play&oldid=965292994},
-  2020.
-\newblock [Online; accessed 10-July-2020].
+  encyclopedia.'' \url{https://en.wikipedia.org/wiki/Free-to-play}, 2022.
+\newblock [Online; accessed 30-June-2022].
 
 \bibitem{lee2018game}
 E.~Lee, Y.~Jang, D.~M. Yoon, J.~Jeon, S.~i. Yang, S.~K. Lee, D.~W. Kim, P.~P.
@@ -155,34 +154,16 @@ M.~Kubat, R.~Holte, and S.~Matwin, ``Learning when negative examples abound,''
   in {\em European Conference on Machine Learning}, pp.~146--153, Springer,
   1997.
 
+\bibitem{wiki:SurrogateModel}
+{Wikipedia contributors}, ``Surrogate model --- {Wikipedia}{,} the free
+  encyclopedia.'' \url{https://en.wikipedia.org/wiki/Surrogate_model}, 2022.
+\newblock [Online; accessed 30-June-2022].
+
 \bibitem{wu2008top}
 X.~Wu, V.~Kumar, J.~R. Quinlan, J.~Ghosh, Q.~Yang, H.~Motoda, G.~J. McLachlan,
   A.~Ng, B.~Liu, S.~Y. Philip, Z.-H. Zhou, M.~Steinbach, D.~J. Hand, and
   D.~Steinberg, ``Top 10 algorithms in data mining,'' {\em Knowledge and
   information systems}, vol.~14, no.~1, pp.~1--37, 2008.
-
-\bibitem{chawla2009data}
-N.~V. Chawla, ``Data mining for imbalanced datasets: An overview,'' in {\em
-  Data mining and knowledge discovery handbook}, pp.~875--886, Springer, 2009.
-
-\bibitem{4309452}
-I.~Tomek, ``Two modifications of cnn,'' {\em IEEE Transactions on Systems, Man,
-  and Cybernetics}, vol.~SMC-6, no.~11, pp.~769--772, 1976.
-
-\bibitem{smith2014instance}
-M.~R. Smith, T.~Martinez, and C.~Giraud-Carrier, ``An instance level analysis
-  of data complexity,'' {\em Machine learning}, vol.~95, no.~2, pp.~225--256,
-  2014.
-
-\bibitem{batista2003balancing}
-G.~E. Batista, A.~L. Bazzan, and M.~C. Monard, ``Balancing training data for
-  automated annotation of keywords: a case study.,'' in {\em WOB}, pp.~10--18,
-  2003.
-
-\bibitem{liu2008exploratory}
-X.-Y. Liu, J.~Wu, and Z.-H. Zhou, ``Exploratory undersampling for
-  class-imbalance learning,'' {\em IEEE Transactions on Systems, Man, and
-  Cybernetics, Part B (Cybernetics)}, vol.~39, no.~2, pp.~539--550, 2008.
 
 \bibitem{brownlee2020imbalanced}
 J.~Brownlee, {\em Imbalanced Classification with Python: Better Metrics,
