@@ -43,6 +43,7 @@
 \end{figure}
 
 Chen與Guestrin~\cite{chen2016xgboost}實作出高效率的梯度提升 ( Gradient Boosting )，稱其為極限梯度提升，除了使用提升方法建樹外，還針對錯誤修正的步驟，引入梯度下降法 ( Gradient Descent ) 的概念，加速了學習模型的收斂速度，使其修正錯誤的能力更加精準，大幅減少訓練的時間成本。近年來透過極限梯度提升來訓練的研究越來越多，且其預測能力皆有不錯的表現~\cite{XGBoostTemporalData}~\cite{martinez2020machine}~\cite{semenov2016performance}~\cite{janusz2017helping}，明顯優於裝袋算法建樹方式的其他學習模型。
+\newpage
 
 從上述得知，選用樹狀結構之學習模型將有助於預測分類問題，且其中使用極限梯度提升之成效最佳。因此，為求本論文之預測新進玩家流失能夠達到預期，將採用決策樹、隨機森林與極限梯度提升來驗證樹狀結構之優勢以及極限梯度提升之最佳表現。
 

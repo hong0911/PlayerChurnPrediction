@@ -154,11 +154,6 @@ M.~Kubat, R.~Holte, and S.~Matwin, ``Learning when negative examples abound,''
   in {\em European Conference on Machine Learning}, pp.~146--153, Springer,
   1997.
 
-\bibitem{wiki:SurrogateModel}
-{Wikipedia contributors}, ``Surrogate model --- {Wikipedia}{,} the free
-  encyclopedia.'' \url{https://en.wikipedia.org/wiki/Surrogate_model}, 2022.
-\newblock [Online; accessed 30-June-2022].
-
 \bibitem{wu2008top}
 X.~Wu, V.~Kumar, J.~R. Quinlan, J.~Ghosh, Q.~Yang, H.~Motoda, G.~J. McLachlan,
   A.~Ng, B.~Liu, S.~Y. Philip, Z.-H. Zhou, M.~Steinbach, D.~J. Hand, and
@@ -169,5 +164,57 @@ X.~Wu, V.~Kumar, J.~R. Quinlan, J.~Ghosh, Q.~Yang, H.~Motoda, G.~J. McLachlan,
 J.~Brownlee, {\em Imbalanced Classification with Python: Better Metrics,
   Balance Skewed Classes, Cost-Sensitive Learning}.
 \newblock Machine Learning Mastery, 2020.
+
+\bibitem{armbrust2015spark}
+M.~Armbrust, R.~S. Xin, C.~Lian, Y.~Huai, D.~Liu, J.~K. Bradley, X.~Meng,
+  T.~Kaftan, M.~J. Franklin, A.~Ghodsi, and M.~Zaharia, ``Spark sql: Relational
+  data processing in spark,'' in {\em Proceedings of the 2015 ACM SIGMOD
+  international conference on management of data}, pp.~1383--1394, 2015.
+
+\bibitem{Bilogur2018}
+A.~Bilogur, ``Missingno: a missing data visualization suite,'' {\em Journal of
+  Open Source Software}, vol.~3, no.~22, p.~547, 2018.
+
+\bibitem{michael_waskom_2020_3767070}
+M.~Waskom, O.~Botvinnik, J.~Ostblom, M.~Gelbart, S.~Lukauskas, P.~Hobson, D.~C.
+  Gemperline, T.~Augspurger, Y.~Halchenko, J.~B. Cole, J.~Warmenhoven,
+  J.~de~Ruiter, C.~Pye, S.~Hoyer, J.~Vanderplas, S.~Villalba, G.~Kunter,
+  E.~Quintero, P.~Bachant, M.~Martin, K.~Meyer, C.~Swain, A.~Miles, T.~Brunner,
+  D.~O'Kane, T.~Yarkoni, M.~L. Williams, C.~Evans, C.~Fitzgerald, and Brian,
+  ``mwaskom/seaborn: v0.10.1 (april 2020),'' Apr. 2020.
+
+\bibitem{jeff_reback_2020_3715232}
+J.~Reback, W.~McKinney, jbrockmendel, J.~V. den Bossche, T.~Augspurger,
+  P.~Cloud, gfyoung, Sinhrks, A.~Klein, M.~Roeschke, S.~Hawkins, J.~Tratner,
+  C.~She, W.~Ayd, T.~Petersen, M.~Garcia, J.~Schendel, A.~Hayden,
+  MomIsBestFriend, V.~Jancauskas, P.~Battiston, S.~Seabold, chris b1,
+  h~vetinari, S.~Hoyer, W.~Overmeire, alimcmaster1, K.~Dong, C.~Whelan, and
+  M.~Mehyar, ``pandas-dev/pandas: Pandas 1.0.3,'' Mar. 2020.
+
+\bibitem{mckinney-proc-scipy-2010}
+{W}es {M}c{K}inney, ``{D}ata {S}tructures for {S}tatistical {C}omputing in
+  {P}ython,'' in {\em {P}roceedings of the 9th {P}ython in {S}cience
+  {C}onference} ({S}t\'efan van~der {W}alt and {J}arrod {M}illman, eds.),
+  pp.~56 -- 61, 2010.
+
+\bibitem{scikit-learn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay, ``Scikit-learn:
+  Machine learning in {P}ython,'' {\em Journal of Machine Learning Research},
+  vol.~12, pp.~2825--2830, 2011.
+
+\bibitem{sklearn_api}
+L.~Buitinck, G.~Louppe, M.~Blondel, F.~Pedregosa, A.~Mueller, O.~Grisel,
+  V.~Niculae, P.~Prettenhofer, A.~Gramfort, J.~Grobler, R.~Layton,
+  J.~VanderPlas, A.~Joly, B.~Holt, and G.~Varoquaux, ``{API} design for machine
+  learning software: experiences from the scikit-learn project,'' in {\em ECML
+  PKDD Workshop: Languages for Data Mining and Machine Learning}, pp.~108--122,
+  2013.
+
+\bibitem{davis2006relationship}
+J.~Davis and M.~Goadrich, ``The relationship between precision-recall and roc
+  curves,'' in {\em Proceedings of the 23rd international conference on Machine
+  learning}, pp.~233--240, 2006.
 
 \end{thebibliography}

@@ -7,10 +7,10 @@
 
 \begin{itemize}
   \item[■] 資料前處理階段：首先將從資料庫群中整合所有所需資料，並過濾出有價值之原始資料，再著手目標值準備、資料特徵探勘與特徵工程，以利後續分析及機器學習使用。
-  \item[■] 資料分析階段：使用前階段產出之有價值原始資料進行探索性資料分析，觀察資料特徵是否可以提供給學習模型較多之資訊。
+  \item[■] 資料分析階段：使用前階段產出之有價值原始資料進行探索性資料分析，透過統計圖表來觀察資料特性，藉由流失玩家與非流失玩家的資料分佈，來觀察資料特徵是否可以提供給學習模型較多之資訊。
   \item[■] 機器學習階段：首先將有價值原始資料集進行分割為訓練及測試集，隨後針對訓練集進行交叉驗證搭配配參數表，以獲得模型的最佳參數解，最後藉由測試集來驗證評估最佳模型，產出預測結果。
   \item[■] 預測結果分析階段：使用前階段產出之預測結果進行資料特徵重要性分析，以利更加了解及解釋資料特徵與遊戲所提供之體驗綜合評估。
-  \item[■] 產業應用分析階段：參考代理人模型 ( Surrogate Model )~\cite{wiki:SurrogateModel}，用較簡單的模型來模擬較複雜的模型，能協助了解流失玩家的行為規則。
+  \item[■] 產業應用分析階段：參考代理人模型，用較簡單的模型來模擬較複雜的模型，能協助了解流失玩家的行為規則，作為市場操作人員的操作依據。
 \end{itemize} 
 
 \begin{figure}[!htb]
@@ -23,16 +23,18 @@
 \newpage
 
 \section{資料前處理階段}
+\label{sec:DataPreProcess}
 
 此階段將著重於資料之整合與過濾，為求能收集到有價值之原始資料，以提高後續分析研究之價值，同時進行目標值的準備、資料特徵的探勘與資料特徵工程，協助機器學習之訓練，目標產出有價值之玩家遊戲行為軌跡資料集。
 
 \subsection{整合資料}
+\label{subsec:DataIntegration}
 
 首先資料庫群中之資料皆以天為單位，記錄了各項遊戲之玩家行為軌跡，如圖~\ref{fig:Image_Databases}。此步驟將依各項遊戲為整合目標，重整為多個原始資料集，每個原始資料集中，只會記錄該類遊戲之每位玩家行為軌跡，如圖~\ref{fig:Image_Integration}，將可提升後續目標值準備及資料特徵探勘速度。
 
 \begin{figure}[!htb]
   \begin{center}
-    \includegraphics[width=0.7\textwidth]{figures/Image_Databases.png}
+    \includegraphics[width=0.6\textwidth]{figures/Image_Databases.png}
     \caption[資料庫群內資料之示意圖]{資料庫群內資料之示意圖}
     \label{fig:Image_Databases}
   \end{center}
@@ -40,13 +42,13 @@
 
 \begin{figure}[!htb]
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{figures/Image_Integration.png}
+    \includegraphics[width=0.85\textwidth]{figures/Image_Integration.png}
     \caption[依各項遊戲為整合目標之示意圖]{依各項遊戲為整合目標之示意圖}
     \label{fig:Image_Integration}
   \end{center}
 \end{figure}
 
-除了上述之玩家遊戲行為軌跡原始資料集外，還另外收集了玩家輪廓資料 ( 含國家、玩家等級等 ) 與玩家平台操作紀錄 ( 含消費紀錄、客訴紀錄等 )，最終此步驟將產出三大類原始資料集 (圖~\ref{fig:Image_OriginalDatasets}) ：
+除了上述之玩家遊戲行為軌跡原始資料集外，還另外收集了玩家輪廓資料 ( 含國家、玩家等級等 ) 與玩家平台操作紀錄 ( 含消費紀錄、客訴紀錄等 )，最終此步驟將產出三大類原始資料集，如圖~\ref{fig:Image_OriginalDatasets}：
 
 \begin{itemize}
   \item[■] 玩家輪廓資料 ( 含國家、玩家等級等 )
@@ -56,11 +58,12 @@
 
 \begin{figure}[!htb]
   \begin{center}
-    \includegraphics[width=0.8\textwidth]{figures/Image_OriginalDatasets.png}
+    \includegraphics[width=0.75\textwidth]{figures/Image_OriginalDatasets.png}
     \caption[原始資料集示意圖]{原始資料集示意圖}
     \label{fig:Image_OriginalDatasets}
   \end{center}
 \end{figure}
+\newpage
 
 \subsection{資料過濾}
 \label{subsec:DataFilter}
@@ -78,7 +81,7 @@
 
 \begin{figure}[!htb]
   \begin{center}
-    \includegraphics[width=0.8\textwidth]{figures/Image_MissingValueHandle.png}
+    \includegraphics[width=0.7\textwidth]{figures/Image_MissingValueHandle.png}
     \caption[刪除空缺值示意圖]{刪除空缺值示意圖}
     \label{fig:Image_MissingValueHandle}
   \end{center}
@@ -101,7 +104,7 @@
 
 \begin{figure}[!htb]
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{figures/Image_DataCleaning.png}
+    \includegraphics[width=0.8\textwidth]{figures/Image_DataCleaning.png}
     \caption[判別有價值與無價值玩家之示意圖]{判別有價值與無價值玩家之示意圖 (以$O$、$R$、$P$分別為 2、1、2 為例) }
     \label{fig:Image_DataCleaning}
   \end{center}
@@ -123,17 +126,17 @@
 
 \begin{figure}[!htb]
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{figures/Image_ClassPreparation.png}
+    \includegraphics[width=0.8\textwidth]{figures/Image_ClassPreparation.png}
     \caption[非流失玩家與流失玩家之示意圖]{非流失玩家與流失玩家之示意圖 (以$O$、$R$、$P$分別為 2、1、2 為例) }
     \label{fig:Image_ClassPreparation}
   \end{center}
 \end{figure}
 
-本論文將預測目標聚焦於流失的新進玩家，所以透過觀察期與表現期來侷限流失玩家之定義。圖~\ref{fig:Image_ClassVennChart} 為流失玩家與非流失玩家范氏圖，可以從圖中看出，最外圍之黑圓框代表所有玩家 (於 \ref{subsubsec:NonValuePlayerHandle}~小節中，篩檢後之有價值玩家) ，而藍色底之圓形範圍代表所有非流失玩家 ( $class\ 0$ ) ，內圈之綠圓框代表前述流失定義門檻，綠圓框內之紅色底圓型範圍則代表所有流失玩家 ( $class\ 1$ )，其中深紅色底之圓形範圍代表表現期後無登入紀錄的玩家；淺紅色底之圓形範圍代表表現期後有登入紀錄的玩家。可以由上述說明來了解到資料內流失玩家與非流失玩家之分佈狀況及其關係。
+本論文將預測目標聚焦於流失的新進玩家，所以透過觀察期與表現期來侷限流失玩家之定義。圖~\ref{fig:Image_ClassVennChart} 為流失玩家與非流失玩家范氏圖，可以從圖中看出，最外圍之黑圓框代表所有玩家\ (\ 於 \ref{subsubsec:NonValuePlayerHandle}~小節中，篩檢後之有價值玩家\ )，而藍色底之圓形範圍代表所有非流失玩家 ( $class\ 0$ ) ，內圈之綠圓框代表前述流失定義門檻，綠圓框內之紅色底圓型範圍則代表所有流失玩家 ( $class\ 1$ )，其中深紅色底之圓形範圍代表表現期後無登入紀錄的玩家；淺紅色底之圓形範圍代表表現期後有登入紀錄的玩家。可以由上述說明來了解到資料內流失玩家與非流失玩家之分佈狀況及其關係。
 
 \begin{figure}[!htb]
   \begin{center}
-    \includegraphics[width=0.6\textwidth]{figures/Image_ClassVennChart.png}
+    \includegraphics[width=0.5\textwidth]{figures/Image_ClassVennChart.png}
     \caption[流失玩家與非流失玩家范氏圖]{流失玩家與非流失玩家范氏圖}
     \label{fig:Image_ClassVennChart}
   \end{center}
@@ -144,17 +147,18 @@
 
 此步驟將探勘供機器學習使用之資料特徵。在遊戲領域巨量資料中，相較於在學習模型上進行深入研究與改進，透過資料特徵之轉化及選擇顯得更為重要且有效。所以對資料集進行不同面向之探勘，除了可以獲取更多的資訊，也能讓後續資料分析以及機器學習更加順利。
 
-本文將觀察期作為資料特徵探勘期，對每位玩家進行資料特徵探勘，自玩家創立帳號日之$O$天內，探勘其所需之資料特徵。資料特徵之探勘面向將參考於~\cite{sifa2015predicting}~\cite{lee2016predicting}~\cite{martinez2020machine}之探勘想法，主要聚焦於玩家之行為軌跡，並將其進行特徵工程與設計綜合指標特徵。
+本文將觀察期作為資料特徵探勘期，對每位玩家進行資料特徵探勘。資料特徵之探勘面向將參考於~\cite{sifa2015predicting}~\cite{lee2016predicting}~\cite{martinez2020machine}之探勘想法，主要聚焦於玩家之行為軌跡，並將其進行特徵工程與設計綜合指標特徵。
 
 圖~\ref{fig:Image_FeatureEngineering} 為特徵工程示意圖。紅色箭頭為第一層特徵變數建立方式，對資料集以多種統計方式建立資料特徵，並用多個時間框架做拆分，以獲得第一層特徵變數；藍色箭頭為第二層特徵變數建立方式，針對第一層特徵變數做計算，進一步來得到第二層特徵變數，如變化量特徵等。
 
 \begin{figure}[!htb]
   \begin{center}
-    \includegraphics[width=1\textwidth]{figures/Image_FeatureEngineering.png}
+    \includegraphics[width=0.95\textwidth]{figures/Image_FeatureEngineering.png}
     \caption[特徵工程示意圖]{特徵工程示意圖}
     \label{fig:Image_FeatureEngineering}
   \end{center}
 \end{figure}
+\newpage
 
 最終可以將資料特徵種類分為三大類：
 
@@ -164,34 +168,6 @@
   \item[■] 玩家遊戲行為軌跡：包含玩家以遊戲為探勘範疇之行為軌跡。如押注次數、贏分等。
 \end{itemize}
 
-%各面向之詳細探勘資料特徵如表~\ref{tab:Features} ，其中遊戲貨幣A及B為購買遊戲內禮包獲得，並為平台內共通之遊戲籌碼。
-
-%\begin{table}[!htb]
-%	\centering
-%	\begin{tabular}{cclcl}
-%		\hline \hline
-%		特徵種類 && 特徵 \\
-%    \hline \hline
-%    \multirow{4}*{玩家資料} && 設備所在地 \\
-%    && 設備平台 && \\
-%    && 設備廠牌 && \\
-%    && 設備型號 && \\
-%    \hline
-%    玩家平台操作紀錄 && 遊戲貨幣A之餘額變化 \\
-%    \hline
-%    \multirow{6}*{玩家遊戲行為軌跡} && 遊玩天數 \\
-%    && 遊戲貨幣A之餘額變化 \\
-%    && 總贏遊戲次數 \\
-%    && 總贏分 \\
-%    && 獲得遊戲貨幣A之總額 \\
-%    && 獲得遊戲貨幣B之總額 \\
-%    \hline \hline
-%		\end{tabular}
-%	\caption[資料特徵種類表]{資料特徵種類表}
-%	\label{tab:Features}
-%\end{table}
-%\newpage
-
 \section{資料分析階段}
 
 此階段將著重於資料的分析。為求在訓練機器學習前，可以藉由資料分析之方法來了解到資料之特性，以提高後續解讀資料特徵之重要性與其相關之連結。另外，還觀察資料特徵是否可以提供給學習模型較多的資訊。
@@ -200,8 +176,8 @@
 採用探索性資料分析，藉由圖表呈現協助了解資料之特性，並且檢查高資訊量之資料特徵，此步驟將利用下列兩種圖表來觀察資料特性：
 
 \begin{itemize}
-  \item [■] 長條圖：觀察資料特徵分布情況，如圖~\ref{fig:Image_EDADiagrams} (a)。
-  \item [■] 散佈圖：觀察資料特徵間之關聯性，如圖~\ref{fig:Image_EDADiagrams} (b)。
+  \item [■] 長條圖：比較資料數值，如圖~\ref{fig:Image_EDADiagrams} (a)。
+  \item [■] 直方圖：觀察資料分布情況，如圖~\ref{fig:Image_EDADiagrams} (b)。
 \end{itemize}
 
 \begin{figure}[!htb]
@@ -209,8 +185,8 @@
   \subfigure[長條圖] {
     \includegraphics[width=0.45\columnwidth]{figures/Image_BarDiagram.png}
   }
-  \subfigure[散佈圖] {    
-	  \includegraphics[width=0.45\columnwidth]{figures/Image_ScatterDiagram.png}
+  \subfigure[直方圖] {    
+	  \includegraphics[width=0.45\columnwidth]{figures/Image_HistogramDiagram.png}
   }
   \caption[探索性資料分析之使用圖表類型]{探索性資料分析之使用圖表類型}
   \label{fig:Image_EDADiagrams}
@@ -219,19 +195,30 @@
 \subsubsection{高資訊量之資料特徵}
 \label{subsubsec:ValuableFeatures}
 
-為了使後續資料特徵重要性之解讀能夠更加清晰，於產出預測結果前即針對資料集進行資料分析，提早推測高資訊量之資料特徵。藉由觀察資料特徵之分佈是否有明顯差異性，而推測此資料特徵能夠提供給學習模型較多的資訊，將此類資料特徵認為是高資訊量之資料特徵，使得後續資料特徵重要性分析之解釋可以更加順利。
+藉由觀察資料特徵之分佈是否有明顯差異性，而推測此資料特徵能夠提供給學習模型較多的資訊，將此類資料特徵認為是高資訊量之資料特徵，使得後續資料特徵重要性分析之解釋可以更加順利。
 
-%如圖~\ref{fig:Image_ValuableFeatures}，可以從圖中看出，非付費玩家資料分佈集中於0附近；而付費玩家資料分佈則分散於y軸上，可見此種資料特徵容易區分出付費玩家與非付費玩家，能夠提供給學習模型較多的資訊。
+假設玩家於觀察期間登入天數之人數統計如圖~\ref{fig:Image_ValuableFeatures}，假設觀察期為4天。可以從圖中看出，非流失玩家數會隨著登入天數增加而遞增；流失玩家數則隨著登入天數增加而遞減，能夠容易地區分出流失玩家與非流失玩家，屬於高資訊量之資料特徵。
 
-%\begin{figure}[!htb]
-%  \begin{center}
-%    \includegraphics[width=0.45\textwidth]{figures/Image_ValuableFeatures.png}
-%    \caption[高資訊量之資料特徵示意圖]{高資訊量之資料特徵示意圖}
-%    \label{fig:Image_ValuableFeatures}
-%  \end{center}
-%\end{figure}
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=0.55\textwidth]{figures/Image_ValuableFeatures.png}
+    \caption[高資訊量之資料特徵示意圖]{高資訊量之資料特徵示意圖}
+    \label{fig:Image_ValuableFeatures}
+  \end{center}
+\end{figure}
+
+假設玩家於觀察期間登入天數之人數統計如圖~\ref{fig:Image_WorthlessFeatures}，假設觀察期為4天。可以從圖中看出，無論是非流失玩家還是流失玩家，玩家數都隨著登入天數增加而遞增，較難以區分出流失玩家與非流失玩家，屬於低資訊量之資料特徵。
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=0.55\textwidth]{figures/Image_WorthlessFeatures.png}
+    \caption[低資訊量之資料特徵示意圖]{資訊量之資料特徵示意圖}
+    \label{fig:Image_WorthlessFeatures}
+  \end{center}
+\end{figure}
 
 \section{機器學習階段}
+\label{sec:MachineLearning}
 
 此階段將著重於機器學習訓練以及不平衡資料權重調整，最後產出最佳模型之預測結果，提供給流失玩家之預測分析以及資料特徵重要性分析使用。本文選擇樹狀結構之學習模型進行訓練，樹狀結構之學習模型對於巨量資料分類預測顯得更為合適，並且對於預測結果之解釋也相對清楚，而本論文所挑選之學習模型包含：決策樹、隨機森林與極限梯度提升。
 
@@ -243,7 +230,7 @@
 \begin{figure}[!htb]
   \begin{center}
     \includegraphics[width=0.8\textwidth]{figures/Image_SplitDataset.png}
-    \caption[分割訓練與測試資料集示意圖]{分割訓練與測試資料集示意圖 (以$X$、$Y$分別為 7、3 為例) }
+    \caption[分割訓練與測試資料集示意圖]{分割訓練與測試資料集示意圖 (以$X$、$Y$分別為 8、2 為例) }
     \label{fig:Image_SplitDataset}
   \end{center}
 \end{figure}
@@ -252,6 +239,7 @@
 \label{subsec:ModelSelection}
 
 本文選擇樹狀結構的學習模型進行訓練。樹狀結構的學習模型對於巨量資料分類預測顯得更為合適，並且對於預測結果之解釋也相對清楚，是研究中常使用的學習模型~\cite{wu2008top}，因其模型結構能夠清楚表現每筆樣本之預測路徑，可以協助了解到學習模型如何做出決策，如白箱模型 ( white box model )；而神經網路結構之學習模型，其模型內的結構難以解析，如黑箱模型 ( black box model )，則無法進行更一步的研究。而本論文所挑選之學習模型包含：
+\newpage
 
 \begin{itemize}
   \item [■] 決策樹：樹狀結構學習模型之最基礎結構，單樹結構，採用CART ( Classification and Regression Tree ) 演算法進行建樹。
@@ -330,13 +318,11 @@
 
 \begin{figure}[!htb]
   \begin{center}
-    \includegraphics[width=0.7\textwidth]{figures/Image_RepeatedStratifiedKFold.png}
+    \includegraphics[width=0.65\textwidth]{figures/Image_RepeatedStratifiedKFold.png}
     \caption[RepeatedStratifiedKFold示意圖]{RepeatedStratifiedKFold示意圖 (以Repeated、KFold分別為 2、3 為例) }
     \label{fig:Image_RepeatedStratifiedKFold}
   \end{center}
 \end{figure}
-
-%另外，因類別型資料特徵不適用於樹狀結構之學習模型，故在其應用於機器學習前，將此類資料特徵透過One Hot Encoding進行轉化，以利機器學習訓練。
 
 \subsection{評估驗證最佳模型}
 \label{subsec:EvaluateBestModel}
@@ -373,8 +359,12 @@
 \end{table}
 
 \section{預測結果分析階段}
+\label{sec:PredictionResultAnalysis}
 
 此階段將著重於資料特徵重要性之分析。透過前述 \ref{subsec:EvaluateBestModel}~小節所產出之預測結果，計算其資料特徵於各學習模型中各樹之重要性，並加總後正規化，產出之分析結果將與前述 \ref{subsubsec:ValuableFeatures}~小節中推測之資料特徵進行探討，並藉由最終結果對遊戲中的遊玩體驗進行評估與建議。
+
+\subsection{資料特徵重要性分析}
+\label{subsec:FeatureImportanceAnalysis}
 
 將資料特徵重要性 ( Feature Importance, $fi$ ) 定義為加總各樹中各資料特徵於節點分割時所提供之基尼不純度 ( $G$ ) ( 見式~\ref{eq:GiniImpurityFormula} ) ，稱為基尼重要性 ( Gini Importance, $GI$ )，再將其正規化至區間[0,1]中。
 
@@ -400,6 +390,20 @@
 \end{equation}
 
 \section{產業應用分析階段}
+\label{sec:ApplicationAnalysis}
 
-此階段將著重於建立代理人模型。代理人模型為一種優化方法，當模型較為複雜、計算量較大時，可以用一簡化模型來替代，例如：用決策樹作為極限梯度提升之代理人模型，結構上較為簡單，在解釋玩家流失的行為規則上也較為清楚。
+此階段將著重於建立代理人模型。代理人模型為一種優化方法，當模型較為複雜、計算量較大時，可以用一簡化模型來替代，如決策樹‧
+
+\subsection{代理人模型}
+\label{subsec:SurrogateModel}
+
+圖~\ref{fig:Image_SurrogateModel} 為代理人模型示意圖，用決策樹作為極限梯度提升之代理人模型，結構上較為簡單，在解釋玩家流失的行為規則上也較為清楚，讓市場操作人員的挽留策略更加明確。
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=0.85\textwidth]{figures/Image_SurrogateModel.png}
+    \caption[代理人模型示意圖]{代理人模型示意圖}
+    \label{fig:Image_SurrogateModel}
+  \end{center}
+\end{figure}
 \newpage

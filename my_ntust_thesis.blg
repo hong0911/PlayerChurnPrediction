@@ -3,44 +3,49 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: my_ntust_thesis.aux
 The style file: ieeetr.bst
 Database file #1: my_bib.bib
-You've used 33 entries,
+Warning--entry type for "michael_waskom_2020_3767070" isn't style-file defined
+--line 705 of file my_bib.bib
+Warning--entry type for "jeff_reback_2020_3715232" isn't style-file defined
+--line 785 of file my_bib.bib
+You've used 40 entries,
             1876 wiz_defined-function locations,
-            671 strings with 10132 characters,
-and the built_in function-call counts, 9151 in all, are:
-= -- 850
-> -- 420
+            712 strings with 12914 characters,
+and the built_in function-call counts, 12509 in all, are:
+= -- 1069
+> -- 756
 < -- 0
-+ -- 154
-- -- 121
-* -- 655
-:= -- 1308
-add.period$ -- 39
-call.type$ -- 33
-change.case$ -- 30
++ -- 268
+- -- 228
+* -- 976
+:= -- 1852
+add.period$ -- 45
+call.type$ -- 40
+change.case$ -- 37
 chr.to.int$ -- 0
-cite$ -- 33
-duplicate$ -- 476
-empty$ -- 895
-format.name$ -- 121
-if$ -- 2211
+cite$ -- 40
+duplicate$ -- 600
+empty$ -- 1119
+format.name$ -- 228
+if$ -- 2943
 int.to.chr$ -- 0
-int.to.str$ -- 33
-missing$ -- 33
-newline$ -- 108
-num.names$ -- 35
-pop$ -- 152
+int.to.str$ -- 40
+missing$ -- 39
+newline$ -- 128
+num.names$ -- 44
+pop$ -- 192
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 286
+skip$ -- 382
 stack$ -- 0
-substring$ -- 538
-swap$ -- 170
+substring$ -- 716
+swap$ -- 226
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 91
-width$ -- 35
-write$ -- 323
+while$ -- 114
+width$ -- 42
+write$ -- 384
+(There were 2 warnings)
