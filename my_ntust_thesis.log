@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.5.4)  15 JUL 2022 18:56
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.5.4)  16 AUG 2022 15:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -753,28 +753,78 @@ Overfull \hbox (0.77173pt too wide) detected at line 113
 
 
 Underfull \hbox (badness 2277) detected at line 138
-\TU/標楷體(0)/m/n/17.28 中 華 民 國 一 一 一 年 六 月 三 十 日
+\TU/標楷體(0)/m/n/17.28 中 華 民 國 一 一 一 年 八 月 十 五 日
  []
 
 [1
 
-]) (./sections/introduction.tex
-Chapter 1.
-[1
-
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
+Underfull \hbox (badness 10000) detected at line 314
+\TU/標楷體(0)/m/n/20.74 中 文 摘 要
+ []
+
+(./frontpages/my_cabstract.tex) [1] (./frontpages/my_eabstract.tex) [2]
+Underfull \hbox (badness 10000) detected at line 357
+\TU/標楷體(0)/m/n/20.74 誌 謝
+ []
+
+(./frontpages/my_ackn.tex) [3]
+Underfull \hbox (badness 10000) detected at line 371
+\TU/標楷體(0)/b/n/20.74 目 錄
+ []
+
+(./my_ntust_thesis.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 21.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 1.
  (c:/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [2] [3]) (./sections/relative-work.tex
+) [4
+
+] [5])
+\tf@toc=\write4
+\openout4 = `my_ntust_thesis.toc'.
+
+ [6]
+Underfull \hbox (badness 10000) detected at line 385
+\TU/標楷體(0)/b/n/20.74 圖 目 錄
+ []
+
+(./my_ntust_thesis.lof [7
+
+])
+\tf@lof=\write5
+\openout5 = `my_ntust_thesis.lof'.
+
+ [8]
+Underfull \hbox (badness 10000) detected at line 399
+\TU/標楷體(0)/b/n/20.74 表 目 錄
+ []
+
+(./my_ntust_thesis.lot)
+\tf@lot=\write6
+\openout6 = `my_ntust_thesis.lot'.
+
+ [9
+
+]
+Underfull \hbox (badness 10000) detected at line 434
+\TU/標楷體(0)/b/n/20.74 符 號 說 明
+ []
+
+(./frontpages/my_symbols.tex [10
+
+]) [11]) (./sections/introduction.tex
+Chapter 1.
+[1
+
+] [2] [3]) (./sections/relative-work.tex
 Chapter 2.
 [4
 
@@ -783,7 +833,7 @@ File: figures/Image_Bagging.png Graphic file (type bmp)
 <figures/Image_Bagging.png>
 File: figures/Image_Boosting.png Graphic file (type bmp)
 <figures/Image_Boosting.png>
- [5] [6]) (./sections/method.tex [7]
+ [5]) (./sections/method.tex [6] [7]
 Chapter 3.
 File: figures/Image_Framework.png Graphic file (type bmp)
 <figures/Image_Framework.png>
@@ -816,101 +866,97 @@ File: figures/Image_BarDiagram.png Graphic file (type bmp)
 <figures/Image_BarDiagram.png>
 File: figures/Image_HistogramDiagram.png Graphic file (type bmp)
 <figures/Image_HistogramDiagram.png>
- [15]
 File: figures/Image_ValuableFeatures.png Graphic file (type bmp)
 <figures/Image_ValuableFeatures.png>
+ [15]
 File: figures/Image_WorthlessFeatures.png Graphic file (type bmp)
 <figures/Image_WorthlessFeatures.png>
  [16]
 File: figures/Image_SplitDataset.png Graphic file (type bmp)
 <figures/Image_SplitDataset.png>
- [17] [18]
+ [17] [18] [19]
 File: figures/Image_RepeatedStratifiedKFold.png Graphic file (type bmp)
 <figures/Image_RepeatedStratifiedKFold.png>
- [19] [20] [21]
+ [20]
+File: figures/evaluation/Image_ROCCurve.png Graphic file (type bmp)
+<figures/evaluation/Image_ROCCurve.png>
+ [21]
+File: figures/evaluation/Image_PRCurve.png Graphic file (type bmp)
+<figures/evaluation/Image_PRCurve.png>
+File: figures/evaluation/Image_GoodROCBadPR.png Graphic file (type bmp)
+<figures/evaluation/Image_GoodROCBadPR.png>
+ [22] [23] [24]
 File: figures/Image_SurrogateModel.png Graphic file (type bmp)
 <figures/Image_SurrogateModel.png>
- [22]) (./sections/evaluation.tex [23]
+ [25]) (./sections/evaluation.tex
 Chapter 4.
-[24
+[26
 
 ]
 Overfull \hbox (11.20865pt too wide) in paragraph at lines 51--60
  [][] 
  []
 
-[25]
+[27]
 File: figures/evaluation/Image_PlayerChurnPeriod.png Graphic file (type bmp)
 <figures/evaluation/Image_PlayerChurnPeriod.png>
- [26]
+ [28]
 File: figures/evaluation/Image_OneHotEncoder.png Graphic file (type bmp)
 <figures/evaluation/Image_OneHotEncoder.png>
- [27]
-File: figures/evaluation/Image_CountryBarPlot.png Graphic file (type bmp)
-<figures/evaluation/Image_CountryBarPlot.png>
- [28]
-File: figures/evaluation/Image_CountryPayerRatioBarPlot.png Graphic file (type bmp)
-<figures/evaluation/Image_CountryPayerRatioBarPlot.png>
-File: figures/evaluation/Image_UnreasonableFeatureBarPlot.png Graphic file (type bmp)
-<figures/evaluation/Image_UnreasonableFeatureBarPlot.png>
  [29]
-File: figures/evaluation/Image_GameTypeATotalWin.png Graphic file (type bmp)
-<figures/evaluation/Image_GameTypeATotalWin.png>
-File: figures/evaluation/Image_GameTypeABalanceDiff.png Graphic file (type bmp)
-<figures/evaluation/Image_GameTypeABalanceDiff.png>
+File: figures/evaluation/Image_FirstFeatures.png Graphic file (type bmp)
+<figures/evaluation/Image_FirstFeatures.png>
+File: figures/evaluation/Image_SecondFeatures.png Graphic file (type bmp)
+<figures/evaluation/Image_SecondFeatures.png>
  [30]
-File: figures/evaluation/Image_GameTypeATotalWin&Entered.png Graphic file (type bmp)
-<figures/evaluation/Image_GameTypeATotalWin&Entered.png>
-File: figures/evaluation/Image_GameTypeABalanceDiff&Entered.png Graphic file (type bmp)
-<figures/evaluation/Image_GameTypeABalanceDiff&Entered.png>
+File: figures/evaluation/Image_LoginDays.png Graphic file (type bmp)
+<figures/evaluation/Image_LoginDays.png>
  [31]
-File: figures/evaluation/Image_GameTypeD65TotalWin.png Graphic file (type bmp)
-<figures/evaluation/Image_GameTypeD65TotalWin.png>
-File: figures/evaluation/Image_GameTypeD65TotalWinTimes.png Graphic file (type bmp)
-<figures/evaluation/Image_GameTypeD65TotalWinTimes.png>
+File: figures/evaluation/Image_DailyActivityMissionTimes.png Graphic file (type bmp)
+<figures/evaluation/Image_DailyActivityMissionTimes.png>
  [32]
-File: figures/evaluation/Image_GameTypeE62TotalWinTimes.pdf Graphic file (type pdf)
-<use figures/evaluation/Image_GameTypeE62TotalWinTimes.pdf>
-File: figures/evaluation/Image_GameTypeE62TotalCoinAAwarded.png Graphic file (type bmp)
-<figures/evaluation/Image_GameTypeE62TotalCoinAAwarded.png>
- [33] [34] [35]
-File: figures/evaluation/Image_ROCCurve.pdf Graphic file (type pdf)
-<use figures/evaluation/Image_ROCCurve.pdf>
-File: figures/evaluation/Image_PRCurve.pdf Graphic file (type pdf)
-<use figures/evaluation/Image_PRCurve.pdf>
- [36]
-File: figures/evaluation/Image_GoodROCBadPR.png Graphic file (type bmp)
-<figures/evaluation/Image_GoodROCBadPR.png>
- [37]
+File: figures/evaluation/Image_D3SlotsMeanWinTimes.png Graphic file (type bmp)
+<figures/evaluation/Image_D3SlotsMeanWinTimes.png>
+File: figures/evaluation/Image_SystemType.png Graphic file (type bmp)
+<figures/evaluation/Image_SystemType.png>
+ [33] [34]
 File: figures/evaluation/Image_DTROCCurve.png Graphic file (type bmp)
 <figures/evaluation/Image_DTROCCurve.png>
 File: figures/evaluation/Image_RFROCCurve.png Graphic file (type bmp)
 <figures/evaluation/Image_RFROCCurve.png>
 File: figures/evaluation/Image_XGBROCCurve.png Graphic file (type bmp)
 <figures/evaluation/Image_XGBROCCurve.png>
- [38]
+ [35]
 File: figures/evaluation/Image_DTPRCurve.png Graphic file (type bmp)
 <figures/evaluation/Image_DTPRCurve.png>
 File: figures/evaluation/Image_RFPRCurve.png Graphic file (type bmp)
 <figures/evaluation/Image_RFPRCurve.png>
 File: figures/evaluation/Image_XGBPRCurve.png Graphic file (type bmp)
 <figures/evaluation/Image_XGBPRCurve.png>
- [39] [40]
+ [36]
 File: figures/evaluation/Image_ModelsROCCurve.png Graphic file (type bmp)
 <figures/evaluation/Image_ModelsROCCurve.png>
 File: figures/evaluation/Image_ModelsPRCurve.png Graphic file (type bmp)
 <figures/evaluation/Image_ModelsPRCurve.png>
- [41] [42]
+ [37] [38] [39]
 File: figures/evaluation/Image_DTFeatureImportances.png Graphic file (type bmp)
 <figures/evaluation/Image_DTFeatureImportances.png>
- [43]
+ [40]
 File: figures/evaluation/Image_RFFeatureImportances.png Graphic file (type bmp)
 <figures/evaluation/Image_RFFeatureImportances.png>
 File: figures/evaluation/Image_XGBFeatureImportances.png Graphic file (type bmp)
 <figures/evaluation/Image_XGBFeatureImportances.png>
- [44] [45]) (./sections/Conclusion.tex
+ [41]
+Overfull \hbox (4.31802pt too wide) in paragraph at lines 469--490
+ [][] 
+ []
+
+[42]
+File: figures/evaluation/Image_SurrogateModel.png Graphic file (type bmp)
+<figures/evaluation/Image_SurrogateModel.png>
+ [43]) (./sections/Conclusion.tex [44]
 Chapter 5.
-) (./backpages/ntust_backpages.tex [46
+) (./backpages/ntust_backpages.tex [45
 
 ] (./my_ntust_thesis.bbl
 Underfull \hbox (badness 10000) detected at line 1
@@ -922,27 +968,42 @@ Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 (xeCJK)                
 (xeCJK)                Try to use `\setCJKmonofont[...]{...}' to define it.
 
-[47
 
-] [48] [49]
-Underfull \hbox (badness 3354) in paragraph at lines 195--199
+Underfull \hbox (badness 10000) in paragraph at lines 27--31
+[]\TU/TimesNewRoman(0)/m/n/12 Wikipedia contributors, “Hyperparameter optimization — Wikipedia, The
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--31
+\TU/TimesNewRoman(0)/m/n/12 Free Encyclopedia.” []$[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][][][][][][] []
+ []
+
+[46
+
+]
+Underfull \hbox (badness 1314) in paragraph at lines 75--78
+[]\TU/TimesNewRoman(0)/m/n/12 Wikipedia contributors, “Free-to-play — Wikipedia, The Free Encyclopedia.”
+ []
+
+[47] [48] [49]
+Underfull \hbox (badness 3354) in paragraph at lines 214--217
 []\TU/TimesNewRoman(0)/m/n/12 Wes McKinney, “Data Structures for Statistical Computing in Python,” in
  []
 
-[50])) [51] (./my_ntust_thesis.aux)
+)) [50] (./my_ntust_thesis.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `my_ntust_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 32C3A62ED98297694473C2589BCAD528;5875.
+(rerunfilecheck)             Checksum: DC89C34021270C1193BDF0EA26C2C984;6469.
  ) 
 Here is how much of TeX's memory you used:
- 18515 strings out of 478090
- 378935 string characters out of 5852452
- 735143 words of memory out of 5000000
- 38784 multiletter control sequences out of 15000+600000
+ 18512 strings out of 478090
+ 376417 string characters out of 5852452
+ 740033 words of memory out of 5000000
+ 38765 multiletter control sequences out of 15000+600000
  475604 words of font info for 88 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 72i,19n,85p,848b,464s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,19n,85p,1054b,464s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on my_ntust_thesis.pdf (52 pages).
+Output written on my_ntust_thesis.pdf (62 pages).

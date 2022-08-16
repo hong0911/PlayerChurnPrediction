@@ -3,12 +3,12 @@
 
 針對遊戲領域巨量資料進行新進玩家流失預測，先將資料進行前處理以及預測前之資料分析，隨後訓練機器學習與其最佳化處理，最後再依預測之結果導入資料特徵重要性分析之中，完成整體預測與分析之工作。
 
-為求研究效率能夠快速且有效，本論文對此議題運用一巨量資料探勘框架，圖~\ref{fig:Image_Framework} 為巨量資料探勘框架示意圖，此框架將由五大階段組成：
+本論文提出一巨量資料探勘框架，圖~\ref{fig:Image_Framework} 為巨量資料探勘框架示意圖，此框架將由五大階段組成：
 
 \begin{itemize}
-  \item[■] 資料前處理階段：首先將從資料庫群中整合所有所需資料，並過濾出有價值之原始資料，再著手目標值準備、資料特徵探勘與特徵工程，以利後續分析及機器學習使用。
+  \item[■] 資料前處理階段：首先將從資料庫群中整合所有所需資料，並過濾出有價值之原始資料，再著手目標值準備並建立資料特徵，以利後續分析及機器學習使用。
   \item[■] 資料分析階段：使用前階段產出之有價值原始資料進行探索性資料分析，透過統計圖表來觀察資料特性，藉由流失玩家與非流失玩家的資料分佈，來觀察資料特徵是否可以提供給學習模型較多之資訊。
-  \item[■] 機器學習階段：首先將有價值原始資料集進行分割為訓練及測試集，隨後針對訓練集進行交叉驗證搭配配參數表，以獲得模型的最佳參數解，最後藉由測試集來驗證評估最佳模型，產出預測結果。
+  \item[■] 機器學習階段：首先將有價值原始資料集進行分割為訓練及測試集，隨後針對訓練集進行網格搜索與交叉驗證，並搭配參數表，以獲得模型的最佳參數解，最後藉由測試集來驗證評估最佳模型，產出預測結果。
   \item[■] 預測結果分析階段：使用前階段產出之預測結果進行資料特徵重要性分析，以利更加了解及解釋資料特徵與遊戲所提供之體驗綜合評估。
   \item[■] 產業應用分析階段：參考代理人模型，用較簡單的模型來模擬較複雜的模型，能協助了解流失玩家的行為規則，作為市場操作人員的操作依據。
 \end{itemize} 
@@ -25,7 +25,7 @@
 \section{資料前處理階段}
 \label{sec:DataPreProcess}
 
-此階段將著重於資料之整合與過濾，為求能收集到有價值之原始資料，以提高後續分析研究之價值，同時進行目標值的準備、資料特徵的探勘與資料特徵工程，協助機器學習之訓練，目標產出有價值之玩家遊戲行為軌跡資料集。
+此階段將著重於資料之整合與過濾，為求能收集到有價值之原始資料，以提高後續分析研究之價值，同時進行目標值的準備，並建立資料特徵，協助機器學習之訓練，目標產出有價值之玩家遊戲行為軌跡資料集。
 
 \subsection{整合資料}
 \label{subsec:DataIntegration}
@@ -132,7 +132,7 @@
   \end{center}
 \end{figure}
 
-本論文將預測目標聚焦於流失的新進玩家，所以透過觀察期與表現期來侷限流失玩家之定義。圖~\ref{fig:Image_ClassVennChart} 為流失玩家與非流失玩家范氏圖，可以從圖中看出，最外圍之黑圓框代表所有玩家\ (\ 於 \ref{subsubsec:NonValuePlayerHandle}~小節中，篩檢後之有價值玩家\ )，而藍色底之圓形範圍代表所有非流失玩家 ( $class\ 0$ ) ，內圈之綠圓框代表前述流失定義門檻，綠圓框內之紅色底圓型範圍則代表所有流失玩家 ( $class\ 1$ )，其中深紅色底之圓形範圍代表表現期後無登入紀錄的玩家；淺紅色底之圓形範圍代表表現期後有登入紀錄的玩家。可以由上述說明來了解到資料內流失玩家與非流失玩家之分佈狀況及其關係。
+本論文將預測目標聚焦於流失的新進玩家，所以透過觀察期與表現期來侷限流失玩家之定義。圖~\ref{fig:Image_ClassVennChart} 為流失玩家與非流失玩家范氏圖 ( Venn Diagram )，可以從圖中看出，最外圍之黑圓框代表所有玩家\ (\ 於 \ref{subsubsec:NonValuePlayerHandle}~小節中，篩檢後之有價值玩家\ )，而藍色底之圓形範圍代表所有非流失玩家 ( $class\ 0$ ) ，內圈之綠圓框代表前述流失定義門檻，綠圓框內之紅色底圓型範圍則代表所有流失玩家 ( $class\ 1$ )，其中深紅色底之圓形範圍代表表現期後無登入紀錄的玩家；淺紅色底之圓形範圍代表表現期後有登入紀錄的玩家。可以由上述說明來了解到資料內流失玩家與非流失玩家之分佈狀況及其關係。
 
 \begin{figure}[!htb]
   \begin{center}
@@ -142,42 +142,42 @@
   \end{center}
 \end{figure}
 
-\subsection{資料特徵探勘與特徵工程}
+\subsection{建立資料特徵}
 \label{subsec:FeatureMining}
 
 此步驟將探勘供機器學習使用之資料特徵。在遊戲領域巨量資料中，相較於在學習模型上進行深入研究與改進，透過資料特徵之轉化及選擇顯得更為重要且有效。所以對資料集進行不同面向之探勘，除了可以獲取更多的資訊，也能讓後續資料分析以及機器學習更加順利。
 
-本文將觀察期作為資料特徵探勘期，對每位玩家進行資料特徵探勘。資料特徵之探勘面向將參考於~\cite{sifa2015predicting}~\cite{lee2016predicting}~\cite{martinez2020machine}之探勘想法，主要聚焦於玩家之行為軌跡，並將其進行特徵工程與設計綜合指標特徵。
+本文將觀察期作為資料探勘期，對每位玩家進行資料探勘。資料之探勘面向將參考於~\cite{sifa2015predicting}~\cite{lee2016predicting}~\cite{martinez2020machine}之探勘想法，主要聚焦於玩家之行為軌跡，並用其建立資料特徵。
 
-圖~\ref{fig:Image_FeatureEngineering} 為特徵工程示意圖。紅色箭頭為第一層特徵變數建立方式，對資料集以多種統計方式建立資料特徵，並用多個時間框架做拆分，以獲得第一層特徵變數；藍色箭頭為第二層特徵變數建立方式，針對第一層特徵變數做計算，進一步來得到第二層特徵變數，如變化量特徵等。
+圖~\ref{fig:Image_FeatureEngineering} 為本文建立資料特徵之示意圖。紅色箭頭為第一層特徵變數建立方式，對資料集以多種統計方式建立資料特徵，並用多個時間框架做拆分，以獲得第一層特徵變數；藍色箭頭為第二層特徵變數建立方式，針對第一層特徵變數做計算，進一步來得到第二層特徵變數，如變化量特徵等。
 
 \begin{figure}[!htb]
   \begin{center}
     \includegraphics[width=0.95\textwidth]{figures/Image_FeatureEngineering.png}
-    \caption[特徵工程示意圖]{特徵工程示意圖}
+    \caption[建立資料特徵示意圖]{建立資料特徵示意圖}
     \label{fig:Image_FeatureEngineering}
   \end{center}
 \end{figure}
 \newpage
 
-最終可以將資料特徵種類分為三大類：
+%最終可以將資料特徵種類分為三大類：
 
-\begin{itemize}
-  \item[■] 玩家輪廓資料：包含玩家自身相關資訊。如創帳號國家、玩家等級等。
-  \item[■] 玩家平台操作紀錄：包含玩家以平台為探勘範疇之行為軌跡。如消費紀錄、客訴紀錄等。
-  \item[■] 玩家遊戲行為軌跡：包含玩家以遊戲為探勘範疇之行為軌跡。如押注次數、贏分等。
-\end{itemize}
+%\begin{itemize}
+%  \item[■] 玩家輪廓資料：包含玩家自身相關資訊。如創帳號國家、玩家等級等。
+%  \item[■] 玩家平台操作紀錄：包含玩家以平台為探勘範疇之行為軌跡。如消費紀錄、客訴紀錄等。
+%  \item[■] 玩家遊戲行為軌跡：包含玩家以遊戲為探勘範疇之行為軌跡。如押注次數、贏分等。
+%\end{itemize}
 
 \section{資料分析階段}
 
 此階段將著重於資料的分析。為求在訓練機器學習前，可以藉由資料分析之方法來了解到資料之特性，以提高後續解讀資料特徵之重要性與其相關之連結。另外，還觀察資料特徵是否可以提供給學習模型較多的資訊。
 
 \subsection{探索性資料分析}
-採用探索性資料分析，藉由圖表呈現協助了解資料之特性，並且檢查高資訊量之資料特徵，此步驟將利用下列兩種圖表來觀察資料特性：
+採用探索性資料分析，藉由圖表呈現協助了解玩家資料之分布情況。藉由觀察資料是集中還是平均分散，以此來推測是否為高資訊量之資料特徵。此步驟將利用下列兩種圖表來觀察資料特性：
 
 \begin{itemize}
-  \item [■] 長條圖：比較資料數值，如圖~\ref{fig:Image_EDADiagrams} (a)。
-  \item [■] 直方圖：觀察資料分布情況，如圖~\ref{fig:Image_EDADiagrams} (b)。
+  \item [■] 長條圖 ( Bar Chart )：描述離散性資料，如圖~\ref{fig:Image_EDADiagrams} (a)。
+  \item [■] 直方圖 ( Histogram )：描述連續性資料，如圖~\ref{fig:Image_EDADiagrams} (b)。
 \end{itemize}
 
 \begin{figure}[!htb]
@@ -197,7 +197,7 @@
 
 藉由觀察資料特徵之分佈是否有明顯差異性，而推測此資料特徵能夠提供給學習模型較多的資訊，將此類資料特徵認為是高資訊量之資料特徵，使得後續資料特徵重要性分析之解釋可以更加順利。
 
-假設玩家於觀察期間登入天數之人數統計如圖~\ref{fig:Image_ValuableFeatures}，假設觀察期為4天。可以從圖中看出，非流失玩家數會隨著登入天數增加而遞增；流失玩家數則隨著登入天數增加而遞減，能夠容易地區分出流失玩家與非流失玩家，屬於高資訊量之資料特徵。
+假設，觀察期間玩家登入天數之人數統計如圖~\ref{fig:Image_ValuableFeatures}，假設觀察期為4天。可以從圖中看出，非流失玩家數會隨著登入天數增加而遞增；流失玩家數則隨著登入天數增加而遞減，能夠容易地區分出流失玩家與非流失玩家，屬於高資訊量之資料特徵。
 
 \begin{figure}[!htb]
   \begin{center}
@@ -207,20 +207,21 @@
   \end{center}
 \end{figure}
 
-假設玩家於觀察期間登入天數之人數統計如圖~\ref{fig:Image_WorthlessFeatures}，假設觀察期為4天。可以從圖中看出，無論是非流失玩家還是流失玩家，玩家數都隨著登入天數增加而遞增，較難以區分出流失玩家與非流失玩家，屬於低資訊量之資料特徵。
+假設，觀察期間玩家登入天數之人數統計如圖~\ref{fig:Image_WorthlessFeatures}，假設觀察期為4天。可以從圖中看出，無論是非流失玩家還是流失玩家，玩家數都隨著登入天數增加而遞增，較難以區分出流失玩家與非流失玩家，屬於低資訊量之資料特徵。
 
 \begin{figure}[!htb]
   \begin{center}
     \includegraphics[width=0.55\textwidth]{figures/Image_WorthlessFeatures.png}
-    \caption[低資訊量之資料特徵示意圖]{資訊量之資料特徵示意圖}
+    \caption[低資訊量之資料特徵示意圖]{低資訊量之資料特徵示意圖}
     \label{fig:Image_WorthlessFeatures}
   \end{center}
 \end{figure}
+\newpage
 
 \section{機器學習階段}
 \label{sec:MachineLearning}
 
-此階段將著重於機器學習訓練以及不平衡資料權重調整，最後產出最佳模型之預測結果，提供給流失玩家之預測分析以及資料特徵重要性分析使用。本文選擇樹狀結構之學習模型進行訓練，樹狀結構之學習模型對於巨量資料分類預測顯得更為合適，並且對於預測結果之解釋也相對清楚，而本論文所挑選之學習模型包含：決策樹、隨機森林與極限梯度提升。
+此階段將著重於機器學習訓練以及不平衡資料權重調整，最後產出最佳模型之預測結果，能提供給後續的預測結果分析以及產業應用分析使用。本文選擇樹狀結構之學習模型進行訓練，樹狀結構之學習模型對於巨量資料分類預測顯得更為合適，並且對於預測結果之解釋也相對清楚，而本論文所挑選之學習模型包含：決策樹、隨機森林與極限梯度提升。
 
 \subsection{分割訓練與測試資料集}
 \label{subsec:SplitDataset}
@@ -247,13 +248,6 @@
   \item [■] 極限梯度提升：多樹結構，採用提升方法建樹。
 \end{itemize}
 
-上述三種學習模型之資訊量計算以基尼不純度 ( Gini Impurity, $G$ ) 為主，如式~\ref{eq:GiniImpurityFormula}，其中$c$為$Class$、$p(i)$為$c$之發生機率。透過基尼不純度 ( $G$ ) 來衡量建樹時之分類準則，挑選出最適合用來進行分割之資料特徵及數值。
-
-\begin{equation}
-  \label{eq:GiniImpurityFormula}
-  Gini\ Impurity(D) = G(D) = 1 - \sum_{i = 1}^{c}\ p(i)^2
-\end{equation}
-
 最後將比較上述三種不同學習模型來挑選出最佳之模型，包含裝袋算法與提升方法不同方式之建樹差異。
 
 \subsection{不平衡資料權重調整}
@@ -261,32 +255,36 @@
 
 進行機器學習訓練於遊戲領域巨量資料時，往往將會遭受資料不平衡之問題，進而影響學習模型之成效與可靠度。
 
-普遍研究中將針對資料集進行預處理， 設法解決資料不平衡之問題，如SMOTE，為了讓少數群之樣本數與多數群相等，會於原始資料集中放入模擬資料。但本文為了確保資料間之真實性，於處理不平衡資料時，不希望針對資料集進行加工，會無法呈現出真實資料集之特性，所以本文將重點放於訓練學習模型時的樣本權重影響，而不對資料集進行直接處理。樣本權重設置如式~\ref{eq:SampleWeightFormula}，其中$N_0$為非流失玩家 ( $class\ 0$ )之樣本數；$N_1$為流失玩家 ( $class\ 1$ )之樣本數。將計算$N_0$與$N_1$之比例差距，此值則為非流失玩家 ( $class\ 0$ )樣本權重放大倍數。
+普遍研究中將針對資料集進行預處理， 設法解決資料不平衡之問題，如SMOTE，為了讓少數群之樣本數與多數群相等，會於原始資料集中放入模擬資料。但本文為了確保資料間之真實性，於處理不平衡資料時，不希望針對資料集進行加工，會無法呈現出真實資料集之特性，所以本文將重點放於訓練學習模型時的樣本權重影響，而不對資料集進行直接處理。樣本權重設置如式~\ref{eq:SampleWeightFormula}，其中$N_0$為非流失玩家 ( $class\ 0$ )之樣本數；$N_1$為流失玩家 ( $class\ 1$ )之樣本數。將計算$N_0$與$N_1$之比例差距，此值則為流失玩家 ( $class\ 1$ )樣本權重縮小倍數。
 
 \begin{equation}
   \label{eq:SampleWeightFormula}
 %  class\ 0 : class\ 1 = \left \lfloor{\frac{N_1}{N_0}}\right \rfloor : 1
-  class\ 0 : class\ 1 = \frac{N_1}{N_0} : 1
+  class\ 0 : class\ 1 = 1 : \frac{N_0}{N_1}
 \end{equation}
 
 \subsection{搜尋最佳參數解}
 \label{subsec:TuningBestParams}
 
-此步驟將對前述 \ref{subsec:ModelSelection}~小節挑選之學習模型進行搜尋最佳參數解，以調教出最適合該學習模型之參數。各學習模型之調教參數如表~\ref{tab:ModelParamsTuning}，針對各學習模型之結構不同，挑選不同的參數進行最佳化，各參數意義說明如表~\ref{tab:ModelParamsDescription}。
+此步驟將對前述 \ref{subsec:ModelSelection}~小節挑選之學習模型進行搜尋最佳參數解，透過網格搜索與交叉驗證，對所有參數一一進行訓練、測試，以調校出最適合該學習模型之參數。
+
+\subsubsection{模型參數}
+
+本文選擇各學習模型之調校參數如表~\ref{tab:ModelParamsTuning}，針對各學習模型之結構不同，挑選不同的參數進行最佳化，各參數意義說明如表~\ref{tab:ModelParamsDescription}。
 
 \begin{table}[!htb]
 	\centering
 	\begin{tabular}{cclclcl}
 		\hline \hline
-		學習模型 && Decision Tree && Random Forest && XGBoost \\
+		學習模型 && 決策樹 && 隨機森林 && 極限梯度提升 \\
     \hline \hline
-    \multirow{4}*{參數調教} && max\char`_depth && n\char`_estimators && n\char`_estimators \\
+    \multirow{4}*{參數調校} && max\char`_depth && n\char`_estimators && n\char`_estimators \\
     && min\char`_samples\char`_split && max\char`_depth && max\char`_depth \\
-    && min\char`_samples\char`_leaf && min\char`_samples\char`_split && \\
-    && min\char`_samples\char`_leaf &&&& \\
+    && min\char`_samples\char`_leaf && min\char`_samples\char`_split && learning\char`_rate \\
+    &&&& min\char`_samples\char`_leaf && \\
     \hline \hline
 		\end{tabular}
-	\caption[學習模型參數調教表]{學習模型參數調教表}
+	\caption[學習模型參數調校表]{學習模型參數調校表}
 	\label{tab:ModelParamsTuning}
 \end{table}
 
@@ -303,23 +301,28 @@
     min\char`_samples\char`_split && 節點分割之最小樣本數限制 \\
     \hline
     min\char`_samples\char`_leaf && 葉節點之最小樣本數限制 \\
+    \hline
+    learning\char`_rate && 學習速率 \\
     \hline \hline
 		\end{tabular}
 	\caption[學習模型參數說明表]{學習模型參數說明表}
 	\label{tab:ModelParamsDescription}
 \end{table}
 
-\subsection{交叉驗證 ( Cross Validation ) }
+\subsubsection{網格搜索與交叉驗證}
 \label{subsec:CrossValidation}
 
-針對訓練資料集進行交叉驗證 ( Cross Validation )，並且搭配前頁之參數調教，最後輸出最佳模型。參考了~\cite{brownlee2020imbalanced}中所使用之RepeatedStratifiedKFold方法，其中使用Stratified方式分割，即為在各Fold中，流失玩家與非流失玩家之資料比例將會相等；使用Repeated方式反覆驗證，即為反覆執行上述之交叉驗證。透過上述之分割方式，可以在每次訓練學習模型時，使真實訓練集保持著原始訓練集的流失玩家與非流失玩家比例。
+網格搜索是在參數列表中進行窮舉搜索，嘗試每一種可能性，找出結果最好的組合，通常會搭配交叉驗證來評估。
+
+針對訓練資料集進行交叉驗證，並且搭配網格搜索找出模型的最佳參數解。參考了~\cite{brownlee2020imbalanced}中所使用之RepeatedStratifiedKFold方法，其中使用Stratified方式分割，即為在各Fold中，流失玩家與非流失玩家之資料比例將會相等；使用Repeated方式反覆驗證，即為反覆執行上述之交叉驗證。透過上述之分割方式，可以在每次訓練學習模型時，使真實訓練集保持著原始訓練集的流失玩家與非流失玩家比例。
+\newpage
 
 圖~\ref{fig:Image_RepeatedStratifiedKFold} 為RepeatedStratifiedKFold示意圖。可以從圖中看出，首先依照前述 \ref{subsec:SplitDataset}~小節，從所有資料初步分割出原始訓練集與測試集，再針對原始訓練集進行RepeatedStratifiedKFold，進行了兩次的交叉驗證，而每次分割原始訓練集時可以看到淺藍底之真實訓練集與淺橘底之驗證集中的流失玩家與非流失玩家比例與原始測試集相等，並且真實訓練集與驗證集中的流失玩家與非流失玩家比例也相等。
 
 \begin{figure}[!htb]
   \begin{center}
     \includegraphics[width=0.65\textwidth]{figures/Image_RepeatedStratifiedKFold.png}
-    \caption[RepeatedStratifiedKFold示意圖]{RepeatedStratifiedKFold示意圖 (以Repeated、KFold分別為 2、3 為例) }
+    \caption[RepeatedStratifiedKFold示意圖]{RepeatedStratifiedKFold方法示意圖 (以Repeated、K-Fold分別為 2、3 為例) }
     \label{fig:Image_RepeatedStratifiedKFold}
   \end{center}
 \end{figure}
@@ -327,7 +330,74 @@
 \subsection{評估驗證最佳模型}
 \label{subsec:EvaluateBestModel}
 
-前述 \ref{subsec:CrossValidation}~小節中，交叉驗證搭配 \ref{subsec:TuningBestParams}~小節中的參數調教表所使用之評估值為 Weighted F$_{\beta}$ - Score，擇其最高值之學習模型，選定為最佳模型。Weighted F$_{\beta}$ - Score 為在 F$_{\beta}$ - Score 評估值上導入樣本數權重概念，如式~\ref{eq:FbetaFormula} 與式~\ref{eq:WeightedFbetaFormula}，適合使用在評估資料不平衡之資料集中。
+學習模型之評估將藉由混淆矩陣 ( Confusion Matrix )、精確率 ( Precision )、召回率 ( Recall )、真陽率 ( True Positive Rate, TPR ) 及假陽率 ( False Positive Rate, FPR ) 來說明，計算方式分別如表~\ref{tab:ConfusionMatrix}、式~\ref{eq:PrecisionFormula}、式~\ref{eq:RecallFormula}、式~\ref{eq:TPRFormula} 及式~\ref{eq:FPRFormula}。並會搭配 ROC Curve 和 PR Curve 來觀察。
+
+\begin{table}[!htb]
+	\centering
+	\begin{tabular}{|c|c|c|}
+	\hline
+	& Predicted $class\ 1$ & Predicted $class\ 0$ \\
+    \hline
+    Actual $class\ 1$ & $True\ Positive\ (\ TP\ )$ & $False\ Negative\ (\ FN\ )$ \\
+    \hline
+    Actual $class\ 0$ & $False\ Positive\ (\ FP\ )$ & $True\ Negative\ (\ TN\ )$ \\
+    \hline
+	\end{tabular}
+	\caption[混淆矩陣]{混淆矩陣}
+	\label{tab:ConfusionMatrix}
+\end{table}
+
+\begin{equation}
+    \label{eq:PrecisionFormula}
+    Precision = \frac{TP}{TP + FP}
+\end{equation}
+
+\begin{equation}
+    \label{eq:RecallFormula}
+    Recall = \frac{TP}{TP + FN}
+\end{equation}
+
+\begin{equation}
+    \label{eq:TPRFormula}
+    True\ Positive\ Rate\ (\ TPR\ ) = \frac{TP}{TP + FN} = Recall
+\end{equation}
+
+\begin{equation}
+    \label{eq:FPRFormula}
+    False\ Positive\ Rate\ (\ FPR\ ) = \frac{FP}{TN + FP}
+\end{equation}
+
+藉由 ROC Curve 來觀察學型模型的真陽率及假陽率。圖~\ref{fig:eva_ROCCurve}為 ROC Curve 示意圖，x 軸為假陽率，y 軸為真陽率。當 x 為 0 時，表示模型在非流失玩家的預測上沒有錯誤；而當 y 為 1 時，表示模型在流失玩家的預測上完全正確。因此，曲線越趨近於左上角則越佳。再用 AUC ( Area Under Curve ) 來衡量此曲線，為計算該曲線面積。
+
+\begin{figure}[!htb]
+    \begin{center}
+      \includegraphics[width=0.65\textwidth]{figures/evaluation/Image_ROCCurve.png}
+      \caption[ROC Curve示意圖]{ROC Curve示意圖\ (\ x 軸為假陽率；y 軸為真陽率；AUC為其曲線面積\ )}
+      \label{fig:eva_ROCCurve}
+    \end{center}
+\end{figure}
+
+藉由 PR Curve 來觀察學型模型的精確率及召回率，圖~\ref{fig:eva_PRCurve}為 PR Curve 示意圖。當 x 為 1 時，表示模型在流失玩家的預測上完全正確；而當 y 為 1 時，表示模型預測的流失玩家完全正確。因此，曲線越趨近於右上角則越佳。再用 AP ( Average Precision ) 來衡量此曲線，皆為計算該曲線面積。
+
+\begin{figure}[!htb]
+    \begin{center}
+      \includegraphics[width=0.65\textwidth]{figures/evaluation/Image_PRCurve.png}
+      \caption[PR Curve示意圖]{PR Curve示意圖\ (\ x 軸為召回率；y 軸為精確率；AP 為其曲線面積\ )}
+      \label{fig:eva_PRCurve}
+    \end{center}
+\end{figure}
+
+本論文將以評估PR Curve為重。因在不平衡資料集上進行評估時，ROC Curve將無法準確的呈現出學習模型的好壞，常有在ROC Curve上表現良好，但其PR Curve卻不如預期，導致此情況原因為多數群之評估遠大於少數群之評估，故可在ROC Curve上擁有好的數值，卻在PR Curve中表現不佳\cite{davis2006relationship}，如圖~\ref{fig:eva_GoodROCBadPR}。
+
+\begin{figure}[!htb]
+    \begin{center}
+      \includegraphics[width=1\textwidth]{figures/evaluation/Image_GoodROCBadPR.png}
+      \caption[不平衡資料中ROC Curve失準示意圖]{不平衡資料中ROC Curve失準示意圖\ (\ 此圖取自~\cite{davis2006relationship}\ )}
+      \label{fig:eva_GoodROCBadPR}
+    \end{center}
+\end{figure}
+
+前述 \ref{subsec:CrossValidation}~小節中，交叉驗證搭配 \ref{subsec:TuningBestParams}~小節中的參數調校表所使用之評估值為 Weighted F$_{\beta}$ - Score，擇其最高值之學習模型，選定為最佳模型。Weighted F$_{\beta}$ - Score 為在 F$_{\beta}$ - Score 評估值上導入樣本數權重概念，如式~\ref{eq:FbetaFormula} 與式~\ref{eq:WeightedFbetaFormula}，其中$N_1$為流失玩家之樣本數、$N_0$為非流失玩家之樣本數、F$_{\beta\ 1}$為流失玩家之F$_{\beta}$ - Score、F$_{\beta\ 0}$為非流失玩家之F$_{\beta}$ - Score。適合使用在評估資料不平衡之資料集中。
 
 \begin{equation}
   \label{eq:FbetaFormula}
@@ -339,7 +409,7 @@
   Weighted\ F_{\beta} = \frac{N_1}{N_0 + N_1} \times F_{\beta\ 1} + \frac{N_0}{N_0 + N_1} \times F_{\beta\ 0}
 \end{equation}
 
-其中 $\beta$ 則為 Precision 與 Recall 之間的比重，如表~\ref{tab:beta}。本論文預測新進玩家是否會流失，將著重於 Recall，即為將所有可能流失的新進玩家預測出來，因為新進玩家有可能是經由廣告吸引而來，而該玩家身上即帶有廣告投放之成本，故希望能將有可能會流失的新進玩家全部預測出來，使得遊戲商能盡可能地保留住所有玩家。
+其中 $\beta$ 則為精確率 ( Precision ) 與召回率 ( Recall ) 之間的比重，如表~\ref{tab:beta}。本論文預測新進玩家是否會流失，將著重於召回率，即為將所有可能流失的新進玩家預測出來，因為新進玩家有可能是經由廣告吸引而來，而該玩家身上即帶有廣告投放之成本，故希望能將有可能會流失的新進玩家全部預測出來，使得遊戲商能盡可能地提高留存率。
 
 \begin{table}[!htb]
 	\centering
@@ -347,11 +417,11 @@
 		\hline \hline
 		$\beta$數值範圍 && 說明 \\
     \hline \hline
-    $0 < \beta < 1$ && 評估著重於 Precision \\
+    $0 < \beta < 1$ && 評估著重於精確率 \\
     \hline
-    $\beta = 1$ && Precision 與 Recall 比重相當 \\
+    $\beta = 1$ && 精確率與召回率比重相當 \\
     \hline
-    $1 < \beta$ && 評估著重於 Recall \\
+    $1 < \beta$ && 評估著重於召回率 \\
     \hline \hline
 		\end{tabular}
 	\caption[$\beta$數值意義表]{$\beta$數值意義表}
@@ -365,6 +435,13 @@
 
 \subsection{資料特徵重要性分析}
 \label{subsec:FeatureImportanceAnalysis}
+
+基尼不純度 ( Gini Impurity, $G$ )~\cite{wiki:DecisionTreeLearning}表示一個隨機選中的樣本被分類錯誤的可能性，如式~\ref{eq:GiniImpurityFormula}，其中$D$為樹中的某個節點、$c$為$Class$、$p(i)$為被分類為$i$類之發生機率。透過基尼不純度 ( $G$ ) 來衡量建樹時之分類準則，值越小，表示其分類的結果較好，以此來挑選出最適合用來進行分割之資料特徵及數值。
+
+\begin{equation}
+  \label{eq:GiniImpurityFormula}
+  Gini\ Impurity(D) = G(D) = \sum_{i = 1}^{c}\ p(i) (1 - p(i)) = 1 - \sum_{i = 1}^{c}\ p(i)^2
+\end{equation}
 
 將資料特徵重要性 ( Feature Importance, $fi$ ) 定義為加總各樹中各資料特徵於節點分割時所提供之基尼不純度 ( $G$ ) ( 見式~\ref{eq:GiniImpurityFormula} ) ，稱為基尼重要性 ( Gini Importance, $GI$ )，再將其正規化至區間[0,1]中。
 
@@ -392,12 +469,14 @@
 \section{產業應用分析階段}
 \label{sec:ApplicationAnalysis}
 
-此階段將著重於建立代理人模型。代理人模型為一種優化方法，當模型較為複雜、計算量較大時，可以用一簡化模型來替代，如決策樹‧
+此階段將著重於建立代理人模型。代理人模型為一種優化方法，當模型較為複雜、計算量較大時，可以用一簡化模型來替代，如決策樹。
 
 \subsection{代理人模型}
 \label{subsec:SurrogateModel}
 
-圖~\ref{fig:Image_SurrogateModel} 為代理人模型示意圖，用決策樹作為極限梯度提升之代理人模型，結構上較為簡單，在解釋玩家流失的行為規則上也較為清楚，讓市場操作人員的挽留策略更加明確。
+代理人模型表示用一簡單的模型來解釋一複雜的模型，如：用決策樹作為極限梯度提升之代理人模型。結構上較為簡單，在解釋玩家流失的行為規則上也較為清楚，以此讓市場操作人員的挽留策略更加明確。
+
+圖~\ref{fig:Image_SurrogateModel} 為代理人模型示意圖，sample 為樣本比、value 為分類為 Class0 及分類為 Class1 的機率、class為類別。此圖將數據集劃分為 2 個類別，其分別各占數據集的 0.36 與 0.64，所以最上面的根節點認為屬於 Class1 的可能性較大。透過根節點可以知道，當特徵 1 小於或等於 3.5 時，有 69.4\% 的樣本數，且屬於 Class1 的可能性較大；反之，當特徵 1 大於 3.5 時，有 30.6\% 的樣本數，且屬於 Class0 的可能性較大。繼續向下通過其他節點，分類結果就能更加確定。
 
 \begin{figure}[!htb]
   \begin{center}

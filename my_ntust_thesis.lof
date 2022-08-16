@@ -1,0 +1,51 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 裝袋算法方式建樹示意圖}}{6}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces 提升方法方式建樹示意圖}}{6}{figure.2.2}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 本論文之巨量資料探勘框架示意圖}}{9}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 資料庫群內資料之示意圖}}{10}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 依各項遊戲為整合目標之示意圖}}{10}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 原始資料集示意圖}}{10}{figure.3.4}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces 刪除空缺值示意圖}}{11}{figure.3.5}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 判別有價值與無價值玩家之示意圖}}{12}{figure.3.6}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces 非流失玩家與流失玩家之示意圖}}{13}{figure.3.7}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces 流失玩家與非流失玩家范氏圖}}{14}{figure.3.8}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces 建立資料特徵示意圖}}{14}{figure.3.9}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces 探索性資料分析之使用圖表類型}}{15}{figure.3.10}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {長條圖}}}{15}{figure.3.10}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {直方圖}}}{15}{figure.3.10}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces 高資訊量之資料特徵示意圖}}{16}{figure.3.11}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces 低資訊量之資料特徵示意圖}}{16}{figure.3.12}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces 分割訓練與測試資料集示意圖}}{17}{figure.3.13}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces RepeatedStratifiedKFold示意圖}}{20}{figure.3.14}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces ROC Curve示意圖}}{21}{figure.3.15}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces PR Curve示意圖}}{22}{figure.3.16}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces 不平衡資料中ROC Curve失準示意圖}}{22}{figure.3.17}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces 代理人模型示意圖}}{25}{figure.3.18}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 新進玩家之流失長條圖}}{28}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 作業系統 One Hot Encoding}}{29}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 第一層特徵變數}}{30}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 第二層特徵變數}}{31}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 觀察期間玩家登入天數之人數統計圖}}{32}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces 觀察期間玩家完成任務之次數統計圖}}{32}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces 玩家創帳號後第三天之老虎機有贏分平均次數統計圖}}{33}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces 作業系統各玩家統計圖}}{33}{figure.4.8}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces 不平衡資料處理前後比較之ROC Curve圖}}{35}{figure.4.9}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {決策樹ROC Curve圖}}}{35}{figure.4.9}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {隨機森林ROC Curve圖}}}{35}{figure.4.9}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {極限梯度提升ROC Curve圖}}}{35}{figure.4.9}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces 不平衡資料處理前後比較之PR Curve圖}}{36}{figure.4.10}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {決策樹PR Curve圖}}}{36}{figure.4.10}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {隨機森林PR Curve圖}}}{36}{figure.4.10}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {極限梯度提升PR Curve圖}}}{36}{figure.4.10}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces 三種學習模型之曲線比較圖}}{37}{figure.4.11}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {三種學習模型之ROC Curve比較圖}}}{37}{figure.4.11}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {三種學習模型之PR Curve比較圖}}}{37}{figure.4.11}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces 決策樹資料特徵重要性比較圖}}{40}{figure.4.12}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces 隨機森林資料特徵重要性比較圖}}{41}{figure.4.13}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces 極限梯度提升資料特徵重要性比較圖}}{41}{figure.4.14}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces 代理人模型圖}}{44}{figure.4.15}%
+\addvspace {10\p@ }
+\contentsfinish 

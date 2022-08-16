@@ -1,0 +1,62 @@
+\contentsline {chapter}{中文摘要}{I}{section*.1}%
+\contentsline {chapter}{ABSTRACT}{II}{section*.2}%
+\contentsline {chapter}{誌謝}{III}{section*.3}%
+\contentsline {chapter}{目錄}{IV}{section*.4}%
+\contentsline {chapter}{圖目錄}{VII}{section*.6}%
+\contentsline {chapter}{表目錄}{IX}{section*.8}%
+\contentsline {chapter}{符號說明}{X}{chapter*.11}%
+\contentsline {chapter}{\numberline {1}緒論}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}研究背景與動機}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}研究目標}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}研究方法概述}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}研究貢獻}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}本論文之章節結構}{3}{section.1.5}%
+\contentsline {chapter}{\numberline {2}文獻探討}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}免費遊戲興起}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}資料前處理}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.3}學習模型選擇}{5}{section.2.3}%
+\contentsline {section}{\numberline {2.4}資料不平衡處理及其評估方式}{6}{section.2.4}%
+\contentsline {chapter}{\numberline {3}研究方法}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}資料前處理階段}{9}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}整合資料}{9}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}資料過濾}{11}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}刪除空缺值}{11}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}無價值玩家資料處理}{12}{subsubsection.3.1.2.2}%
+\contentsline {subsection}{\numberline {3.1.3}目標值準備}{13}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}建立資料特徵}{14}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}資料分析階段}{15}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}探索性資料分析}{15}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}高資訊量之資料特徵}{15}{subsubsection.3.2.1.1}%
+\contentsline {section}{\numberline {3.3}機器學習階段}{17}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}分割訓練與測試資料集}{17}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}學習模型選擇}{17}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}不平衡資料權重調整}{18}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}搜尋最佳參數解}{18}{subsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.4.1}模型參數}{19}{subsubsection.3.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.3.4.2}網格搜索與交叉驗證}{19}{subsubsection.3.3.4.2}%
+\contentsline {subsection}{\numberline {3.3.5}評估驗證最佳模型}{20}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}預測結果分析階段}{23}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}資料特徵重要性分析}{24}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.5}產業應用分析階段}{25}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}代理人模型}{25}{subsection.3.5.1}%
+\contentsline {chapter}{\numberline {4}實驗結果與分析}{26}{chapter.4}%
+\contentsline {section}{\numberline {4.1}實驗系統架構}{26}{section.4.1}%
+\contentsline {section}{\numberline {4.2}資料前處理評估}{27}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}預測受眾評估}{27}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}預測特徵評估}{28}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}資料分析評估}{31}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}探索性資料分析評估}{31}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}機器學習評估}{34}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}分割訓練與測試資料集評估}{34}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}資料不平衡處理評估}{34}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}最佳模型評估}{37}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}時間框架評估}{38}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}預測結果分析評估}{40}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}資料特徵重要性評估}{40}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}產業應用分析評估}{42}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}代理人模型評估}{42}{subsection.4.6.1}%
+\contentsline {chapter}{\numberline {5}結論與未來研究}{45}{chapter.5}%
+\contentsline {section}{\numberline {5.1}結論}{45}{section.5.1}%
+\contentsline {section}{\numberline {5.2}未來研究}{45}{section.5.2}%
+\contentsline {chapter}{參考文獻}{46}{section*.12}%
+\contentsfinish 

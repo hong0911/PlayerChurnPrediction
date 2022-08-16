@@ -1,0 +1,21 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces 學習模型參數調校表}}{19}{table.3.1}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces 學習模型參數說明表}}{19}{table.3.2}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces 混淆矩陣}}{21}{table.3.3}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces $\beta $數值意義表}}{23}{table.3.4}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces 實驗系統架構之研究環境表}}{26}{table.4.1}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces 有價值玩家觀察表}}{27}{table.4.2}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces 非流失玩家及流失玩家定義表}}{28}{table.4.3}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces 資料特徵總數表}}{29}{table.4.4}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces 訓練與測試資料集玩家數表}}{34}{table.4.5}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces 最佳模型評估表}}{37}{table.4.6}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces 最佳模型參數解表}}{38}{table.4.7}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces 參數搜尋範圍表}}{38}{table.4.8}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces 觀察期評估表}}{39}{table.4.9}%
+\contentsline {table}{\numberline {4.10}{\ignorespaces 表現期評估表}}{39}{table.4.10}%
+\contentsline {table}{\numberline {4.11}{\ignorespaces 特徵重要性前十名}}{42}{table.4.11}%
+\addvspace {10\p@ }
+\contentsfinish 
