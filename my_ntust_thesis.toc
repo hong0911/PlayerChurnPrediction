@@ -1,10 +1,10 @@
-\contentsline {chapter}{中文摘要}{I}{section*.1}%
-\contentsline {chapter}{ABSTRACT}{II}{section*.2}%
-\contentsline {chapter}{誌謝}{III}{section*.3}%
-\contentsline {chapter}{目錄}{IV}{section*.4}%
-\contentsline {chapter}{圖目錄}{VII}{section*.6}%
-\contentsline {chapter}{表目錄}{IX}{section*.8}%
-\contentsline {chapter}{符號說明}{X}{chapter*.11}%
+\contentsline {chapter}{中文摘要}{III}{section*.1}%
+\contentsline {chapter}{ABSTRACT}{IV}{section*.2}%
+\contentsline {chapter}{誌謝}{V}{section*.3}%
+\contentsline {chapter}{目錄}{VI}{section*.4}%
+\contentsline {chapter}{圖目錄}{IX}{section*.6}%
+\contentsline {chapter}{表目錄}{XI}{section*.8}%
+\contentsline {chapter}{符號說明}{XII}{chapter*.11}%
 \contentsline {chapter}{\numberline {1}緒論}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}研究背景與動機}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}研究目標}{1}{section.1.2}%

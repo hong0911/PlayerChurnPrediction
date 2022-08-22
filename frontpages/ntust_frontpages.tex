@@ -159,12 +159,12 @@
 % 在口試完成後，再將已簽名的推薦書放入以便裝訂
 % create an entry in table of contents for 推薦書
 % 反註解以下送出空白頁
-% \newpage{\thispagestyle{empty}\addcontentsline{toc}{chapter}{\nameInnerCover}\mbox{}\clearpage}%
-% \newpage
+%\newpage{\thispagestyle{empty}\addcontentsline{toc}{chapter}{\nameInnerCover}\mbox{}\clearpage}%
+\newpage
 
 % 送出插入的文件
-%\includepdf[pages=-]{frontpages/reference_01.png} %推薦書
-%\includepdf[pages=-]{frontpages/reference_02.png} %審定書
+\includepdf[pages=-]{frontpages/reference_01.pdf} %推薦書
+\includepdf[pages=-]{frontpages/reference_02.pdf} %審定書
 
 % 判斷是否要浮水印？
 \ifx\mywatermark\undefined 

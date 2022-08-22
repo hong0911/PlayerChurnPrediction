@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.5.4)  16 AUG 2022 15:46
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.5.4)  18 AUG 2022 14:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -759,16 +759,46 @@ Underfull \hbox (badness 2277) detected at line 138
 [1
 
 ]
+File: frontpages/reference_01.pdf Graphic file (type pdf)
+<use frontpages/reference_01.pdf>
+File: frontpages/reference_01.pdf Graphic file (type pdf)
+<use frontpages/reference_01.pdf>
+File: frontpages/reference_01.pdf Graphic file (type pdf)
+<use frontpages/reference_01.pdf, page 1>
+File: frontpages/reference_01.pdf Graphic file (type pdf)
+<use frontpages/reference_01.pdf, page 1>
+File: frontpages/reference_01.pdf Graphic file (type pdf)
+<use frontpages/reference_01.pdf, page 1>
+File: frontpages/reference_01.pdf Graphic file (type pdf)
+<use frontpages/reference_01.pdf, page 1>
+File: frontpages/reference_01.pdf Graphic file (type pdf)
+<use frontpages/reference_01.pdf, page 1>
+ [1]
+File: frontpages/reference_02.pdf Graphic file (type pdf)
+<use frontpages/reference_02.pdf>
+File: frontpages/reference_02.pdf Graphic file (type pdf)
+<use frontpages/reference_02.pdf>
+File: frontpages/reference_02.pdf Graphic file (type pdf)
+<use frontpages/reference_02.pdf, page 1>
+File: frontpages/reference_02.pdf Graphic file (type pdf)
+<use frontpages/reference_02.pdf, page 1>
+File: frontpages/reference_02.pdf Graphic file (type pdf)
+<use frontpages/reference_02.pdf, page 1>
+File: frontpages/reference_02.pdf Graphic file (type pdf)
+<use frontpages/reference_02.pdf, page 1>
+File: frontpages/reference_02.pdf Graphic file (type pdf)
+<use frontpages/reference_02.pdf, page 1>
+ [2]
 Underfull \hbox (badness 10000) detected at line 314
 \TU/標楷體(0)/m/n/20.74 中 文 摘 要
  []
 
-(./frontpages/my_cabstract.tex) [1] (./frontpages/my_eabstract.tex) [2]
+(./frontpages/my_cabstract.tex) [3] (./frontpages/my_eabstract.tex) [4]
 Underfull \hbox (badness 10000) detected at line 357
 \TU/標楷體(0)/m/n/20.74 誌 謝
  []
 
-(./frontpages/my_ackn.tex) [3]
+(./frontpages/my_ackn.tex) [5]
 Underfull \hbox (badness 10000) detected at line 371
 \TU/標楷體(0)/b/n/20.74 目 錄
  []
@@ -785,24 +815,24 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 1.
  (c:/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [4
+) [6
 
-] [5])
+] [7])
 \tf@toc=\write4
 \openout4 = `my_ntust_thesis.toc'.
 
- [6]
+ [8]
 Underfull \hbox (badness 10000) detected at line 385
 \TU/標楷體(0)/b/n/20.74 圖 目 錄
  []
 
-(./my_ntust_thesis.lof [7
+(./my_ntust_thesis.lof [9
 
 ])
 \tf@lof=\write5
 \openout5 = `my_ntust_thesis.lof'.
 
- [8]
+ [10]
 Underfull \hbox (badness 10000) detected at line 399
 \TU/標楷體(0)/b/n/20.74 表 目 錄
  []
@@ -811,16 +841,16 @@ Underfull \hbox (badness 10000) detected at line 399
 \tf@lot=\write6
 \openout6 = `my_ntust_thesis.lot'.
 
- [9
+ [11
 
 ]
 Underfull \hbox (badness 10000) detected at line 434
 \TU/標楷體(0)/b/n/20.74 符 號 說 明
  []
 
-(./frontpages/my_symbols.tex [10
+(./frontpages/my_symbols.tex [12
 
-]) [11]) (./sections/introduction.tex
+]) [13]) (./sections/introduction.tex
 Chapter 1.
 [1
 
@@ -998,12 +1028,12 @@ Package rerunfilecheck Info: File `my_ntust_thesis.out' has not changed.
 (rerunfilecheck)             Checksum: DC89C34021270C1193BDF0EA26C2C984;6469.
  ) 
 Here is how much of TeX's memory you used:
- 18512 strings out of 478090
- 376417 string characters out of 5852452
+ 18534 strings out of 478090
+ 377139 string characters out of 5852452
  740033 words of memory out of 5000000
- 38765 multiletter control sequences out of 15000+600000
+ 38783 multiletter control sequences out of 15000+600000
  475604 words of font info for 88 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 72i,19n,85p,1054b,464s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,19n,85p,1054b,471s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on my_ntust_thesis.pdf (62 pages).
+Output written on my_ntust_thesis.pdf (64 pages).
